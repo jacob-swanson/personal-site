@@ -1,0 +1,34 @@
+---
+---
+
+@import 'bootstrap/bootstrap';
+@import 'font-awesome/font-awesome';
+
+// Fix spacing on inline nav-items when collapsed
+.nav-item-inline + .nav-item-inline {
+  margin-left: 1rem !important;
+}
+
+// Push footer navbar to the bottom if the page is not tall enough
+html,
+body {
+  height: 100%;
+}
+
+#content {
+  min-height: 100%;
+  position: relative;
+  padding-bottom: 4rem;
+}
+
+.navbar-static-bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.page {
+  @extend .container;
+  padding-top: 2rem;
+}
