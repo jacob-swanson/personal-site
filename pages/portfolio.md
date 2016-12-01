@@ -16,7 +16,7 @@ I created this site using Jekyll and Bootstrap 4.
 
 poe4j is a Path of Exile data mining library written in Java.
 
-It also includes a [Chromatic Calculator](/poe4j/#/chromatic-calculator) web app
+It also includes a [Chromatic Calculator](/poe4j/#/chromatic-calculator){:target="_blank"} web app
 that calculates the most efficient way to spend [Chromatic orbs](http://pathofexile.gamepedia.com/Chromatic_Orb){:target="_blank"} when trying to color an item's [sockets](http://pathofexile.gamepedia.com/Item_socket){:target="_blank"}.
 
 ## <a href="/kerbonaut-naming" target="_blank">Kerbonaut Naming</a>
