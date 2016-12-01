@@ -37,8 +37,8 @@ permalink: /resume/
 {% include resume-employment-header.html company="Geeks and Nerds" title="Software Engineer" date="August 2014 - October 2016" %}
 * Developed high quality and well documented software independently and with small teams using agile development methodologies
 * Main and full-stack developer for RAGE, a web-based content management system using Spring Boot and Angular for the Redstone Test Center (RTC)
-* Added Active Directory authentication with smart cards, strict security controls, and flexible metadata collection for RAGE
-* Set up continuous integration and deployment with GitLab CI and automated code analysis with SonarQube
+* Added Active Directory authentication with smart cards, strict security controls, and flexible metadata collection to RAGE
+* Configured continuous integration and deployment with GitLab CI and automated code analysis with SonarQube
 * Provided customer support, bug fixes, and new features for CabuzTime, a timekeeping web application using Java and JSP
 * Automated the billing and registration processes for CabuzTime using Stripe
 * Created a web application for displaying solar panel stats using Spring Boot, Angular, and D3
