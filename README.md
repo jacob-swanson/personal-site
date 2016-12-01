@@ -1,2 +1,2 @@
-# Jacob-Swanson.github.io
-https://jacob-swanson.github.io/
+# jacob-swanson.github.io
+https://www.jacob-swanson.com
