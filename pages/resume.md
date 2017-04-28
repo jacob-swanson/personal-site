@@ -34,7 +34,7 @@ permalink: /resume/
 
 ## Employment
 {% include resume-employment-header.html company="Jobs2Careers" title="Back-end Software Engineer" date="April 2017 - Present" location="Austin, TX" %}
-* Use PHP, MySQL, and A/B Testing in an Agile environment to develope products which align with business and user needs
+* Use PHP, Java, MySQL, and A/B Testing in an Agile environment to develop products which align with business and user needs
 
 {% include resume-employment-header.html company="Geeks and Nerds" title="Software Engineer" date="August 2014 - October 2016" location="Huntsville, AL" %}
 * Developed high quality and well documented software independently and with small teams using agile development methodologies
