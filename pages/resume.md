@@ -5,18 +5,6 @@ permalink: /resume/
 ---
 
 <h2 class="text-xs-center">Jacob Swanson</h2>
-<div class="row">
-    <div class="col-xs-6">
-        9301 Spectrum Dr. APT 614<br>
-        Austin, TX 78717
-    </div>
-    <div class="col-xs-6">
-        <span class="pull-right">
-            jacob.swanson.n@gmail.com<br>
-            C: {{site.phone_number}}
-        </span>
-    </div>
-</div>
 
 
 ## Technical Skills
