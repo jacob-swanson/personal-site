@@ -7,7 +7,6 @@ baseurl:
 url: http://www.jacob-swanson.com
 github_username:  jacob-swanson
 linkedin_username: jacob-swanson-1a1660a3
-phone_number: (512) 761-5189
 
 # Build settings
 markdown: kramdown
