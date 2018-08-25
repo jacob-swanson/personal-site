@@ -25,7 +25,6 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "postbuild": "react-snap",
     "predeploy": "yarn build",
     "deploy": "gh-pages -b master -d build"
   },
