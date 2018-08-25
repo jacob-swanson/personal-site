@@ -1,6 +1,6 @@
 import * as React from "react";
 import {Navbar} from "./components/Navbar";
-import {HashRouter, Route, Switch} from "react-router-dom";
+import {Route, Router, Switch} from "react-router-dom";
 import {HomePage} from "./pages/home/HomePage";
 import {NotFoundPage} from "./pages/NotFoundPage";
 import {Footer} from "./components/Footer";
@@ -8,9 +8,19 @@ import "./App.css";
 import {ResumePage} from "./pages/resume/ResumePage";
 import {PortfolioPage} from "./pages/portfolio/PortfolioPage";
 import "bulma/css/bulma.css";
+import createHashHistory from "history/createHashHistory";
+import * as ReactGA from "react-ga";
+
+ReactGA.initialize("UA-124596010-1", {debug: process.env.NODE_ENV !== "production"});
+
+const history = createHashHistory();
+history.listen(location => {
+    const path = location.pathname + location.search;
+    ReactGA.pageview(path);
+});
 
 export const App = () => (
-    <HashRouter>
+    <Router history={history}>
         <div className="App">
             <Navbar/>
             <Switch>
@@ -21,5 +31,5 @@ export const App = () => (
             </Switch>
             <Footer/>
         </div>
-    </HashRouter>
+    </Router>
 );
