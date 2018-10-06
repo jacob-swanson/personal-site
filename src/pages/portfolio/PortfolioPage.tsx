@@ -13,10 +13,10 @@ export const PortfolioPage = () => (
                 <p>
                     <FontAwesomeIcon icon={faGithub} fixedWidth={true}/>
                     <a href="https://github.com/jacob-swanson">jacob-swanson</a> / <a
-                    href="https://github.com/jacob-swanson/jacob-swanson.github.io">jacob-swanson.github.io</a>
+                    href="https://github.com/jacob-swanson/personal-site">personal-site</a>
                 </p>
                 <p>
-                    I created this site using React, TypeScript, and Bulma.
+                    I created this site using React, TypeScript, and Bulma. It's hosted via GitHub Pages.
                 </p>
 
                 <h3><a href="http://jacob-swanson.github.io/poe4j/">poe4j</a></h3>
