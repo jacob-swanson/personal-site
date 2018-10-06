@@ -1,2 +1,2 @@
-# jacob-swanson.github.io
+# personal-site
 https://www.jacob-swanson.com
