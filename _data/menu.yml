@@ -1,0 +1,22 @@
+entries:
+  - title: me
+    url: false
+    entries:
+      - title: email
+        url: mailto:me@jacob-swanson.com
+      - title: github
+        url: https://github.com/jacob-swanson
+      - title: linkedin
+        url: https://www.linkedin.com/in/jacob-swanson-1a1660a3/
+
+  - title: resume
+    url: resume
+    external: false
+
+  - title: rss
+    url: feed.xml
+
+  - title: thoughts
+    post_list: true
+    url: false
+    entries: false
