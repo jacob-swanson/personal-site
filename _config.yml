@@ -2,11 +2,10 @@ title: Jacob Swanson
 email: me@jacob-swanson.com
 description: >- 
   Hi, I'm a software engineer living and working in Austin, TX.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.jacob-swanson.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.jacob-swanson.com"
 
-# Build settings
-#theme: minima
+sass:
+        style: compressed
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
