@@ -7,5 +7,6 @@ Jekyll::Hooks.register :site, :post_write do |site|
     :disable_external => false,
     :only_4xx => true,
     :report_invalid_tags => true,
+    :cache => { :timeframe => '2w', :storage_dir => '.htmlproofer-cache' }
   }).run
 end
