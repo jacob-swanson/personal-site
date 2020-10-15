@@ -1,0 +1,15 @@
+entries:
+  - title: Jacob
+    url: false
+    entries:
+      - title: Amazon 
+        url: https://www.amazon.com/hz/wishlist/ls/R6T21Q1XQP8O
+      - title: Home Depot
+        url: https://www.homedepot.com/list/view/details/shared/4f310500-d81b-11e9-af3d-077f1537d526/self
+
+  - title: Caitlin
+    url: false
+    entries:
+      - title: Amazon 
+        url: https://www.amazon.com/hz/wishlist/ls/28IMFK677LNOQ
+
