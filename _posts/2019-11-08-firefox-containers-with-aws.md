@@ -18,7 +18,7 @@ This can be used to match a specific URL during the sign in process to redirect 
 
 Grab the URL for one of your application links.
 
-![](assets/jumpcloud-aws-example.png)
+![](/assets/jumpcloud-aws-example.png)
 
 Here’s what one of mine looks like:
 
