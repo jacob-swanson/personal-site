@@ -1,11 +1,8 @@
 title: Jacob Swanson
-email: me@jacob-swanson.com
-description: >- 
-  Hi, I'm a software engineer living and working in Austin, TX.
-url: "https://www.jacob-swanson.com"
-
+exclude:
+  - README.md
 sass:
-        style: compressed
+  style: compressed
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
