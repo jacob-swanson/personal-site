@@ -48,6 +48,12 @@ code {
   background-color: black;
 }
 
+div.highlighter-rouge code {
+  display: block;
+  overflow-x: auto;
+  padding: 1rem;
+}
+
 blockquote {
   font-style: italic;
   border: thin solid black;
