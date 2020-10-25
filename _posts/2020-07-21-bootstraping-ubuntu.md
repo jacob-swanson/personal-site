@@ -5,6 +5,8 @@ categories: tech
 tags: linux
 ---
 
+# {{page.title}}
+
 In this article, I will describe the steps I took to install Ubuntu from scratch.
 This will involve:
 
@@ -18,14 +20,14 @@ It will automatically use `@` for `/` and `@home` for `/home`.
 
 The other reasons were that I wanted as small of an install as I could manage, and I wanted to learn a thing or two.
 
-# Changelog
+## Changelog
 
 I’ll keep a list of changes made to this document here.
 The top most item in the list will be the most recent change.
 
 * Fix command order when mounting FS. (The mkdir was before the mount.)
 
-# Step 1: Boot up Ubuntu
+## Step 1: Boot up Ubuntu
 
 You’ll need a working system to bootstrap the new one.
 This is up to you, but the easiest way is to create an Ubuntu USB installer and using that as your base system.
@@ -33,7 +35,7 @@ This can probably be any Debian-based system, but I'm using Ubuntu.
 
 [You can download Ubuntu here](https://ubuntu.com/download/desktop).
 
-# Step 2: Create & mount the filesystem
+## Step 2: Create & mount the filesystem
 
 Using your preferred partitioning tools, (re)partition your hard drive as needed.
 In my setup, I’ll be dual booting with Windows and using a single Btrfs partition for Linux.
@@ -80,7 +82,7 @@ The `noatime` and `compress=lzo` options are up to you.
 It prevents writing an access timestamp to each file when it is read.
 On the other hand, `compress=lzo` enables Btrf's compression using the [LZO](https://en.wikipedia.org/wiki/Lempel%E2%80%93Ziv%E2%80%93Oberhumer) algorithm.
 
-# Step 3: Bootstrapping the new system
+## Step 3: Bootstrapping the new system
 
 In this step, you’ll use the `debootstrap` utility to set up a minimal functioning filesystem.
 
@@ -112,7 +114,7 @@ This command will enter the new system as if you logged in.
 
 You now have a minimally functioning chroot environment.
 
-# Step 4: Install a text editor
+## Step 4: Install a text editor
 
 You’ll need to edit some text files so you’ll need to install a text editor.
 My choice is `vim`, but if you don’t know what that is, go with `nano`.
@@ -122,7 +124,7 @@ From this point forward I’ll simply refer to it as `editor`.
 # apt install vim
 ```
 
-# Step 5: Configure /etc/fstab
+## Step 5: Configure /etc/fstab
 
 The `/etc/fstab` file tells the OS what drives to mount where when booting up.
 Normally the installer generates this for you.
@@ -154,7 +156,7 @@ UUID=0bedd677-56f0-4488-aafc-b00d6da7193f /home     btrfs  defaults,noatime,comp
 UUID=9A67-1849                            /boot/efi vfat   defaults,noatime                            0      0
 ```
 
-# Step 6: Configure the timezone
+## Step 6: Configure the timezone
 
 If you’re dual-booting with Windows, configure Ubuntu to use local time instead of UTC for the system clock.
 
@@ -179,7 +181,7 @@ Use this command to configure your timezone.
 # dpkg-reconfigure tzdata
 ```
 
-# Step 7: Install a kernel
+## Step 7: Install a kernel
 
 To be able to boot the system, you’ll need a Linux kernel.
 If you’re not using 64-bit system, then you’ll probably need to do something different here.
@@ -188,7 +190,7 @@ If you’re not using 64-bit system, then you’ll probably need to do something
 # apt install linux-image-generic
 ```
 
-# Step 8: Setup the bootloader
+## Step 8: Setup the bootloader
 
 To actually boot the system, you’ll need a boot loader.
 This will install and setup [Grub](https://www.gnu.org/software/grub/) to be your bootloader using [UEFI](https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface).
@@ -200,7 +202,7 @@ This will install and setup [Grub](https://www.gnu.org/software/grub/) to be you
 
 This will install the necessary files into `/boot/efi` and set up a boot entry in your motherboard’s [NVRAM](https://en.wikipedia.org/wiki/Non-volatile_random-access_memory).
 
-# Step 9: Create a user
+## Step 9: Create a user
 
 You’ll need a user for normal user activity.
 Substitute `me` for the username you want to use.
@@ -233,7 +235,7 @@ If this file is messed up, it can leave you unable to gain root access.
 
 **At this point, the system is ready to be booted and further steps are not strictly required.**
 
-# Step 10: Configure networking
+## Step 10: Configure networking
 
 First, install [Network Manager](https://en.wikipedia.org/wiki/NetworkManager).
 This service does exactly what its name suggests.
@@ -266,7 +268,7 @@ If you’re doing this on a live system, you’ll need to apply the changes usin
 # netplan apply
 ```
 
-# Step 11: Install a desktop environment
+## Step 11: Install a desktop environment
 
 `tasksel` is a useful convenience utility for installing groups of applications.
 You can use it to select Ubuntu minimal to get a minimal Gnome install.
@@ -283,7 +285,7 @@ Alternatively you an install a few meta packages.
 # apt install ubuntu-minimal ubuntu-standard
 ```
 
-# Step 12: Boot into the system
+## Step 12: Boot into the system
 
 You can now boot into the system.
 You should be greeted by Ubuntu’s login screen just like you normally would.
@@ -296,6 +298,6 @@ Hopefully you've leared a lot.
 If you have any problems either leave a comment or shoot me an email.
 I’m not actively monitoring comments on the site at this time, so an email should get my attention sooner.
 
-# References
+## References
 
 * [Installing Ubuntu from a Unix/Linux System](https://help.ubuntu.com/lts/installation-guide/armhf/apds04.html)

@@ -5,6 +5,8 @@ categories: tech
 tags: btrfs linux
 ---
 
+# {{page.title}}
+
 When setting up swap on Btrfs, there are a few extra things to take into consideration.
  
 * Must be using at least Linux Kernel 5.0
@@ -12,7 +14,7 @@ When setting up swap on Btrfs, there are a few extra things to take into conside
 * Must disable copy-on-write (COW)
 * Must disable compression
 
-# Create the swapfile
+## Create the swapfile
 
 Create the Btrfs subvolume to hold the file.
 Feel free to choose whatever path you want.
@@ -36,7 +38,7 @@ I have 8GB of ram, which I rounded up to 2GB of swap.
 # mkswap /var/swap/swapfile
 ```
 
-# Mount it
+## Mount it
 
 If you have problems here, use `dmesg` to check for errors.
 
@@ -44,7 +46,7 @@ If you have problems here, use `dmesg` to check for errors.
 # swapon /var/swap/swapfile
 ```
 
-# Make it permanent
+## Make it permanent
 
 Add the following to `/etc/fstab`.
 
@@ -52,7 +54,7 @@ Add the following to `/etc/fstab`.
 /var/swap/swapfile none swap defaults 0 0
 ```
 
-# References
+## References
 
 * [Swap - ArchWiki](https://wiki.archlinux.org/index.php/swap)
 * [Do we really need swap on modern systems?](https://www.redhat.com/en/blog/do-we-really-need-swap-modern-systems)

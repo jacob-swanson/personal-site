@@ -5,6 +5,8 @@ categories: tech
 tags: linux docker
 ---
 
+# {{page.title}}
+
 In this post, you’ll find out how to configure the IP ranges that Docker uses for its networks.
 
 TL;DR put this into `/etc/docker/daemon.json`.

@@ -5,6 +5,8 @@ categories: tech
 tags: firefox aws
 ---
 
+# {{page.title}}
+
 This article will explain how I setup Firefox to open multiple AWS Consoles in Firefox Container tabs from JumpCloud seamlessly.
 No having to right click a link and selecting a container.
 Just a normal left click.

@@ -1,6 +1,7 @@
 title: Jacob Swanson
 exclude:
   - README.md
+  - .htmlproofer-cache
 sass:
   style: compressed
 plugins:

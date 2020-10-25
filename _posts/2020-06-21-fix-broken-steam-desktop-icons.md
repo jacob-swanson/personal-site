@@ -5,6 +5,8 @@ categories: tech
 tags: btrfs linux
 ---
 
+# {{page.title}}
+
 If your Steam desktop icons are showing up as ".url" files without their associated icons, then follow these steps.
 
 
