@@ -2,8 +2,8 @@ title: Jacob Swanson
 exclude:
   - README.md
   - .htmlproofer-cache
-sass:
-  style: compressed
+  - LICENSE
+  - Makefile
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
