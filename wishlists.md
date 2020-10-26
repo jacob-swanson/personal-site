@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Wishlists
+sitemap: false
 ---
 
 Here's our wishlists:
