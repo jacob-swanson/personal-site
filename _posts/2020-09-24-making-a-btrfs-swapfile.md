@@ -20,7 +20,7 @@ Create the Btrfs subvolume to hold the file.
 Feel free to choose whatever path you want.
 The reason for creating a subvolume is to avoid problems with snapshotting other volumes.
 
-```bash
+```
 # btrfs sub create /var/swap
 ```
 
@@ -29,7 +29,7 @@ The file must be fully allocated and not contain any holes.
 For the size of the file, I follow Red Hat’s recommendation of 20% of your system ram.
 I have 8GB of ram, which I rounded up to 2GB of swap.
 
-```bash
+```
 # truncate -s 0 /var/swap/swapfile
 # chattr +C /var/swap/swapfile
 # btrfs property set /var/swap/swapfile compression none
@@ -42,7 +42,7 @@ I have 8GB of ram, which I rounded up to 2GB of swap.
 
 If you have problems here, use `dmesg` to check for errors.
 
-```bash
+```
 # swapon /var/swap/swapfile
 ```
 

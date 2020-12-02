@@ -17,9 +17,9 @@ Eventually, installing OpenJDK 11 on Ubuntu 18.04 will actually install Java ver
 Here’s what it looks like when you install it.
 You can see that Java reports its version as 10.
 
-```sh
-$ sudo apt install openjdk-11-jdk
-$ java -version
+```
+# sudo apt install openjdk-11-jdk
+# java -version
 openjdk version "10.0.2" 2018-07-17
 OpenJDK Runtime Environment (build 10.0.2+13-Ubuntu-1ubuntu0.18.04.4)
 OpenJDK 64-Bit Server VM (build 10.0.2+13-Ubuntu-1ubuntu0.18.04.4, mixed mode)
@@ -28,9 +28,9 @@ OpenJDK 64-Bit Server VM (build 10.0.2+13-Ubuntu-1ubuntu0.18.04.4, mixed mode)
 This is a problem if you’re specifically targeting 11 for development.
 Here’s how to install the actual OpenJDK 11 using a PPA.
 
-```sh
-$ sudo add-apt-repository ppa:openjdk-r/ppa
-$ sudo apt upgrade
+```
+# sudo add-apt-repository ppa:openjdk-r/ppa
+# sudo apt upgrade
 ```
 
 This way you don’t have to manually install a copy of OpenJDK on your system, and have it nicely managed by apt.

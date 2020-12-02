@@ -11,7 +11,7 @@ In this post, you’ll find out how to configure the IP ranges that Docker uses 
 
 TL;DR put this into `/etc/docker/daemon.json`.
 
-```
+```json
 {
   "bip": "10.10.0.5/24",
   "default-address-pools": [
