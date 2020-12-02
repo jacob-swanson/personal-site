@@ -10,12 +10,12 @@ title: Resume
 | Languages          | Java, PHP, Type/JavaScript, SQL                                                            |
 | Cloud (AWS)        | EC2, ECS, RDS, CloudFormation, S3, Route53, SQS, Kinesis, API Gateway, AWS Batch, DynamoDB | 
 | Other Technologies | Spring Boot, jOOQ, Hibernate, Maven, Gradle, Flyway, RegEx                                 |
-| Data Storage       | PostgreSQL, MySQL, Redis, Kinesis, Solr                                                    |
+| Data Storage       | PostgreSQL, MySQL, Redis, Kinesis                                                    |
 | Tools              | Git, IntelliJ, Docker                                                                      |
 
 # Employment
 
-## Talroo (Formerly Jobs2Careers)
+## [Talroo (Formerly Jobs2Careers)](https://www.talroo.com/)
 
 **Senior Software Engineer**<br/>
 August 2019 - Present<br/>
@@ -34,7 +34,7 @@ Austin, TX
 * Lead team to develop a microservice for storing ad content using Java and PostgreSQL to solve existing data integrity issues and provide a reliable data stream using Kinesis to stream content into Solr for searching
 * Identified and fixed design flaws in the budget system that were leading to significant lost revenue
 
-## Geeks and Nerds (GaN)
+## [Geeks and Nerds (GaN)](https://www.geeksandnerds.com/)
 
 **Software Engineer**<br/>
 September 2014 - October 2016<br/>
@@ -50,7 +50,7 @@ Huntsville, AL
 * Developed RegEx and backend for Acronytor, a Visual Basic application for building acronym lists from Microsoft Word documents
 * Worked with senior software engineers to provide bug fixes and new features for an aviation testing system in C++ with Qt for RTC
 
-## Mentor Graphics
+## [Mentor Graphics](https://www.mentor.com/)
 
 **Intern Software Engineer**<br/>
 January 2013 - August 2013<br/>
@@ -60,7 +60,7 @@ Huntsville, AL
 * Developed unit, integration, and performance tests for the framework
 * Responsible for writing internal documentation and monitoring of automated test results
 
-## Alabama A&M University
+## [Alabama A&M University](https://www.aamu.edu/)
 
 **Contract Developer**<br/>
 June 2011 – August 2011<br/>
@@ -69,7 +69,7 @@ Huntsville, AL
 * Created Water Wheels, a video game using the Unreal Development Kit that is part of a mobile lab focused on teaching water conservation to children
 * Created an Arduino-powered audio-visual demonstration that syncs audio and visual cues to demonstrate a rain-capture system
 
-## University of Alabama in Huntsville (UAH)
+## [University of Alabama in Huntsville (UAH)](https://www.uah.edu/)
 
 **Student Researcher**<br/>
 June 2011 - August 2011<br/>
@@ -79,7 +79,11 @@ Huntsville, AL
 
 # Education
 
-## University of Alabama in Huntsville (UAH)
+## [University of Alabama in Huntsville (UAH)](https://www.uah.edu/)
 
 **Bachelor of Science, Computer Engineering**<br/>
 December 2014
+
+---
+
+References available on request.

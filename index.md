@@ -6,4 +6,12 @@ layout: default
   <p>Hi, I'm a software engineer living and working in Austin, TX.</p>
 </header>
 
-{% include menu_item.html collection=site.data.menu.entries %}
+* me
+  * [email](mailto:me@jacob-swanson.com)
+  * [GitHub](https://github.com/jacob-swanson)
+  * [LinkedIn](https://www.linkedin.com/in/jacob-swanson-1a1660a3/)
+* [resume](/resume.html)
+* [privacy](/privacy.html)
+* [rss](/privacy.html)
+* thoughts
+{% include post_list.md spaces="  " %}

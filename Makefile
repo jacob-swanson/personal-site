@@ -6,3 +6,6 @@ serve:
 
 update:
 	bundle update
+
+install-dependencies:
+	bundle install
