@@ -7,3 +7,11 @@ Code for my personal website.
 Tech:
 * Jekyll
 * Netlify
+
+## Running locally
+
+```bash
+$ just shell
+$ just install-dependencies
+$ just start
+```
