@@ -4,7 +4,7 @@
 
 # Enter nix shell
 shell:
-    nix-shell --pure
+    nix-shell
 
 # Build site
 build:
