@@ -8,11 +8,10 @@ layout: default
 </header>
 
 * me
-    * [email](mailto:me@jacob-swanson.com)
-    * [GitHub](https://github.com/jacob-swanson)
-    * [LinkedIn](https://www.linkedin.com/in/jacob-swanson-1a1660a3/)
+    * [email]({{ site.data.socials.email_url }})
+    * [GitHub]({{ site.data.socials.github_url }})
+    * [LinkedIn]({{ site.data.socials.linkedin_url }})
 * [resume](/resume.html)
 * [privacy](/privacy.html)
-* [rss](/feed.xml)
 * thoughts
   {% include post_list.md spaces="  " %}

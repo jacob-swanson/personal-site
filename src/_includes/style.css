@@ -136,3 +136,7 @@ a {
 a:visited {
     color: var(--color-text-accent)
 }
+
+.centered {
+    text-align: center;
+}
