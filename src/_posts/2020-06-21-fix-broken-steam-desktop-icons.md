@@ -1,14 +1,13 @@
 ---
 layout: post
 title: Fixing broken Steam desktop icons
-categories: 
+categories:
   - tech
 ---
 
 # {{page.title}}
 
 If your Steam desktop icons are showing up as ".url" files without their associated icons, then follow these steps.
-
 
 1. Type "Default apps" into the Windows search bar and open the app.
 2. Scroll down and click “Choose default apps by file type”.

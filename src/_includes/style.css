@@ -1,4 +1,5 @@
 /* From: https://github.com/jwarby/jekyll-pygments-themes/blob/master/bw.css */
+/*@formatter:off*/
 .highlight .hll { background-color: #ffffcc }
 .highlight .c { font-style: italic } /* Comment */
 .highlight .err { border: 1px solid #FF0000 } /* Error */
@@ -33,6 +34,7 @@
 .highlight .sr { font-style: italic } /* Literal.String.Regex */
 .highlight .s1 { font-style: italic } /* Literal.String.Single */
 .highlight .ss { font-style: italic } /* Literal.String.Symbol */
+/*@formatter:on*/
 
 :root {
     --color-background: #1a1a1a;

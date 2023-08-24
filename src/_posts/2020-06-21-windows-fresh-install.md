@@ -1,9 +1,9 @@
 ---
 layout: post
 title: How I do a fresh install of Windows
-categories: 
+categories:
   - tech
-tags: 
+tags:
   - windows reset
 ---
 

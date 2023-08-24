@@ -1,15 +1,8 @@
 title: Jacob Swanson
 url: "https://www.jacob-swanson.com"
 encoding: utf-8
-exclude:
-  - README.md
-  - .htmlproofer-cache/
-  - LICENSE
-  - justfile
-  - shell.nix
-  - .gitignore
-  - .idea/
-  - .jekyll-cache/
+source: src
+disable_disk_cache: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

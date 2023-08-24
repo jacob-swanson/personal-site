@@ -6,11 +6,11 @@ title: Resume
 # Technical Skills
 
 | Category           | Proficiency in approximate descending order                                                |
-| :----------------- | :----------------------------------------------------------------------------------------- |
+|:-------------------|:-------------------------------------------------------------------------------------------|
 | Languages          | Java, PHP, Type/JavaScript, SQL                                                            |
 | Cloud (AWS)        | EC2, ECS, RDS, CloudFormation, S3, Route53, SQS, Kinesis, API Gateway, AWS Batch, DynamoDB | 
 | Other Technologies | Spring Boot, jOOQ, Hibernate, Maven, Gradle, Flyway, RegEx                                 |
-| Data Storage       | PostgreSQL, MySQL, Redis, Kinesis                                                    |
+| Data Storage       | PostgreSQL, MySQL, Redis, Kinesis                                                          |
 | Tools              | Git, IntelliJ, Docker                                                                      |
 
 # Employment

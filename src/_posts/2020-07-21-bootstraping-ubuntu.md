@@ -1,9 +1,9 @@
 ---
 layout: post
 title: Installing Ubuntu from scratch (without the installer)
-categories: 
+categories:
   - tech
-tags: 
+tags:
   - linux
   - ubuntu
   - minimal
@@ -257,7 +257,7 @@ Without this networking will not be automatically configured.
 # editor /etc/netplan/50-network-manager.yaml
 ```
 
-Enter the following: 
+Enter the following:
 
 ```
 network:

@@ -1,11 +1,11 @@
 ---
 layout: post
 title: 3D Printer PID Tuning with OctoPrint
-categories: 
-   - tech
-tags: 
-   - 3dprinting 
-   - octoprint
+categories:
+  - tech
+tags:
+  - 3dprinting
+  - octoprint
 ---
 
 # {{page.title}}
@@ -21,7 +21,7 @@ Improving the printer's temperature control.
 
 ## Why?
 
-New hot end, age, etc.
+New hotend, age, etc.
 Printer doesn't seem to be able to hold a consistent temperature while printing.
 
 ## Original Values

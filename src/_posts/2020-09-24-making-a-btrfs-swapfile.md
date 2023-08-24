@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  Making a Btrfs Swapfile
-categories: 
+title: Making a Btrfs Swapfile
+categories:
   - tech
-tags: 
+tags:
   - btrfs
   - linux
 ---
@@ -11,7 +11,7 @@ tags:
 # {{page.title}}
 
 When setting up swap on Btrfs, there are a few extra things to take into consideration.
- 
+
 * Must be using at least Linux Kernel 5.0
 * Must use a file
 * Must disable copy-on-write (COW)

@@ -11,12 +11,13 @@ tags:
 # {{page.title}}
 
 This article will explain how I setup Firefox to open multiple AWS Consoles in Firefox Container tabs from JumpCloud seamlessly.
-No having to right click a link and selecting a container.
+No having to right-click a link and selecting a container.
 Just a normal left click.
 
 This should work with other SSO sites as long as the URL contains something to identify the account.
 
-You'll need [Firefox](https://www.mozilla.org/en-US/firefox/new/) with [Multi-Account Containers](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/) and [Containerise](https://addons.mozilla.org/en-US/firefox/addon/containerise/) installed.
+You'll need [Firefox](https://www.mozilla.org/en-US/firefox/new/) with [Multi-Account Containers](https://addons.mozilla.org/en-US/firefox/addon/multi-account-containers/)
+and [Containerise](https://addons.mozilla.org/en-US/firefox/addon/containerise/) installed.
 
 Containerise lets you automatically open websites in dedicated containers with more advanced rules than Multi-Account Containers allows.
 This can be used to match a specific URL during the sign in process to redirect to a container tab.

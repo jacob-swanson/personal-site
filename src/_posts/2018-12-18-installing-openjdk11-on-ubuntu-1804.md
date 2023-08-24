@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Installing the actual OpenJDK 11 on Ubuntu 18.04
-categories: 
+categories:
   - tech
-tags: 
-  - ubuntu 
-  - java 
+tags:
+  - ubuntu
+  - java
   - openjdk
 ---
 

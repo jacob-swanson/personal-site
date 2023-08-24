@@ -1,7 +1,3 @@
-_site
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-.vendor
-.htmlproofer-cache
-.idea
+_site/
+.htmlproofer-cache/
+.idea/

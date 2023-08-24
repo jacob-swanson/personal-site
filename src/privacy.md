@@ -22,5 +22,5 @@ Personal data is collected for the following purposes using the following 3rd pa
 
 ## Contact Me
 
-If you have any questions or suggestions about this Privacy Policy, do not hesitate to contact me.
+If you have any questions or suggestions about this privacy policy, do not hesitate to contact me.
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Flashing LineageOS 14.1 to a Nexus 7 (2012)
-categories: 
+categories:
   - tech
 tags:
   - android
