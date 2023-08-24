@@ -20,7 +20,7 @@ I'm excited to connect, collaborate, and contribute to meaningful software engin
 | Languages            | Java, PHP, SQL, TypeScript, JavaScript, HTML, CSS                                                                                                   |
 | Tools                | Spring Boot, Hibernate, MySQL, PostgreSQL, Redis, Solr                                                                                              |
 | Cloud Services (AWS) | ECS, EC2, Fargate, RDS, ElastiCache, CloudFormation, S3, CloudWatch, Cognito, SQS, SNS, Event Bridge, Kinesis, API Gateway, Lambda, Batch, DynamoDB |
-| DevOps               | Linux, Docker, Azure DevOps, Azure Pipelines, AWS CDK                                                                                                      |
+| DevOps               | Linux, Docker, Azure DevOps, Azure Pipelines, AWS CDK, New Relic, PagerDuty, Renovate                                                               |
 
 # Employment
 
