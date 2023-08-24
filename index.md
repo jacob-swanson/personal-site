@@ -12,6 +12,6 @@ layout: default
   * [LinkedIn](https://www.linkedin.com/in/jacob-swanson-1a1660a3/)
 * [resume](/resume.html)
 * [privacy](/privacy.html)
-* [rss](/privacy.html)
+* [rss](/feed.xml)
 * thoughts
 {% include post_list.md spaces="  " %}

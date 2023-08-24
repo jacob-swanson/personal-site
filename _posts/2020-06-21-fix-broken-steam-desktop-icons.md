@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  Fixing broken Steam desktop icons
-categories: tech
-tags: btrfs linux
+title: Fixing broken Steam desktop icons
+categories: 
+  - tech
 ---
 
 # {{page.title}}

@@ -1,8 +1,13 @@
 ---
 layout: post
 title: Installing Ubuntu from scratch (without the installer)
-categories: tech
-tags: linux
+categories: 
+  - tech
+tags: 
+  - linux
+  - ubuntu
+  - minimal
+  - install
 ---
 
 # {{page.title}}
@@ -15,21 +20,21 @@ This will involve:
 3. Installing Gnome
 
 I wanted to do this for a few reasons.
-The primary reason was that [Ubiquity](https://wiki.ubuntu.com/Ubiquity) (Ubuntu’s graphical installer) doesn’t support custom Btrfs subvolumes.
+The primary reason was that [Ubiquity](https://wiki.ubuntu.com/Ubiquity) (Ubuntu's graphical installer) doesn't support custom Btrfs subvolumes.
 It will automatically use `@` for `/` and `@home` for `/home`.
 
 The other reasons were that I wanted as small of an install as I could manage, and I wanted to learn a thing or two.
 
 ## Changelog
 
-I’ll keep a list of changes made to this document here.
+I'll keep a list of changes made to this document here.
 The top most item in the list will be the most recent change.
 
 * Fix command order when mounting FS. (The mkdir was before the mount.)
 
 ## Step 1: Boot up Ubuntu
 
-You’ll need a working system to bootstrap the new one.
+You'll need a working system to bootstrap the new one.
 This is up to you, but the easiest way is to create an Ubuntu USB installer and using that as your base system.
 This can probably be any Debian-based system, but I'm using Ubuntu.
 
@@ -38,9 +43,9 @@ This can probably be any Debian-based system, but I'm using Ubuntu.
 ## Step 2: Create & mount the filesystem
 
 Using your preferred partitioning tools, (re)partition your hard drive as needed.
-In my setup, I’ll be dual booting with Windows and using a single Btrfs partition for Linux.
+In my setup, I'll be dual booting with Windows and using a single Btrfs partition for Linux.
 
-Here’s what my partition layout looks like.
+Here's what my partition layout looks like.
 
 ```
 # fdisk -l
@@ -54,9 +59,9 @@ Device              Start        End    Sectors  Size Type
 ```
 
 Next format your partitions.
-If you don’t already have an EFI partition, you’ll need to make one of those too.
+If you don't already have an EFI partition, you'll need to make one of those too.
 
-Here’s what I did to create a Btrfs root (named `ubuntu`) and home (named `home`) subvolumes.
+Here's what I did to create a Btrfs root (named `ubuntu`) and home (named `home`) subvolumes.
 
 ```
 # mkfs.btrfs /dev/nvme0n1p5
@@ -68,7 +73,7 @@ Here’s what I did to create a Btrfs root (named `ubuntu`) and home (named `hom
 ```
 
 Then mount them.
-I’m using `/mnt/ubuntu`, but you can substitute anything you want.
+I'm using `/mnt/ubuntu`, but you can substitute anything you want.
 
 ```
 # mount /dev/nvme0n1p5 /mnt/ubuntu -o defaults,noatime,compress=lzo,subvol=ubuntu
@@ -84,20 +89,20 @@ On the other hand, `compress=lzo` enables Btrf's compression using the [LZO](htt
 
 ## Step 3: Bootstrapping the new system
 
-In this step, you’ll use the `debootstrap` utility to set up a minimal functioning filesystem.
+In this step, you'll use the `debootstrap` utility to set up a minimal functioning filesystem.
 
 ```
 # apt install debootstrap
 ```
 
-`deboostrap` is a utility that will download an archive from Ubuntu’s mirror and unpack it for you.
+`deboostrap` is a utility that will download an archive from Ubuntu's mirror and unpack it for you.
 Substitute `focal` for the latest Ubuntu release codename.
 
 ```
 # debootstrap --arch amd64 focal /mnt/ubuntu
 ```
 
-At this point, you’ll need to mount all of the device files into your newly bootstrapped directory so the system can actually be used.
+At this point, you'll need to mount all of the device files into your newly bootstrapped directory so the system can actually be used.
 
 ```
 # mount -t proc proc /mnt/ubuntu/proc
@@ -116,9 +121,9 @@ You now have a minimally functioning chroot environment.
 
 ## Step 4: Install a text editor
 
-You’ll need to edit some text files so you’ll need to install a text editor.
-My choice is `vim`, but if you don’t know what that is, go with `nano`.
-From this point forward I’ll simply refer to it as `editor`.
+You'll need to edit some text files so you'll need to install a text editor.
+My choice is `vim`, but if you don't know what that is, go with `nano`.
+From this point forward I'll simply refer to it as `editor`.
 
 ```
 # apt install vim
@@ -129,7 +134,7 @@ From this point forward I’ll simply refer to it as `editor`.
 The `/etc/fstab` file tells the OS what drives to mount where when booting up.
 Normally the installer generates this for you.
 
-You’ll need to know the UUID of each device, which you can retrieve using the `blkid` command.
+You'll need to know the UUID of each device, which you can retrieve using the `blkid` command.
 
 ```
 # blkid
@@ -158,13 +163,13 @@ UUID=9A67-1849                            /boot/efi vfat   defaults,noatime     
 
 ## Step 6: Configure the timezone
 
-If you’re dual-booting with Windows, configure Ubuntu to use local time instead of UTC for the system clock.
+If you're dual-booting with Windows, configure Ubuntu to use local time instead of UTC for the system clock.
 
 ```
 # editor /etc/adjtime
 ```
 
-Here’s what it should look like.
+Here's what it should look like.
 
 ```
 0.0 0 0.0
@@ -172,7 +177,7 @@ Here’s what it should look like.
 LOCAL
 ```
 
-If this file doesn’t exist, the system will default to UTC.
+If this file doesn't exist, the system will default to UTC.
 You can also substitute LOCAL with UTC to configure it explicitly.
 
 Use this command to configure your timezone.
@@ -183,8 +188,8 @@ Use this command to configure your timezone.
 
 ## Step 7: Install a kernel
 
-To be able to boot the system, you’ll need a Linux kernel.
-If you’re not using 64-bit system, then you’ll probably need to do something different here.
+To be able to boot the system, you'll need a Linux kernel.
+If you're not using 64-bit system, then you'll probably need to do something different here.
 
 ```
 # apt install linux-image-generic
@@ -192,7 +197,7 @@ If you’re not using 64-bit system, then you’ll probably need to do something
 
 ## Step 8: Setup the bootloader
 
-To actually boot the system, you’ll need a boot loader.
+To actually boot the system, you'll need a boot loader.
 This will install and setup [Grub](https://www.gnu.org/software/grub/) to be your bootloader using [UEFI](https://en.wikipedia.org/wiki/Unified_Extensible_Firmware_Interface).
 
 ```
@@ -200,11 +205,11 @@ This will install and setup [Grub](https://www.gnu.org/software/grub/) to be you
 # grub-install --efi-directory=/boot/efi --bootloader-id=ubuntu
 ```
 
-This will install the necessary files into `/boot/efi` and set up a boot entry in your motherboard’s [NVRAM](https://en.wikipedia.org/wiki/Non-volatile_random-access_memory).
+This will install the necessary files into `/boot/efi` and set up a boot entry in your motherboard's [NVRAM](https://en.wikipedia.org/wiki/Non-volatile_random-access_memory).
 
 ## Step 9: Create a user
 
-You’ll need a user for normal user activity.
+You'll need a user for normal user activity.
 Substitute `me` for the username you want to use.
 
 ```
@@ -262,7 +267,7 @@ network:
 
 This will make Network Manager bring any ethernet devices up using DHCP.
 
-If you’re doing this on a live system, you’ll need to apply the changes using this:
+If you're doing this on a live system, you'll need to apply the changes using this:
 
 ```
 # netplan apply
@@ -279,7 +284,7 @@ You can choose any alternatives you want here like Kubuntu, Mate, etc.
 # tasksel
 ```
 
-Alternatively you an install a few meta packages.
+Alternatively you can install a few meta packages.
 
 ```
 # apt install ubuntu-minimal ubuntu-standard
@@ -288,16 +293,16 @@ Alternatively you an install a few meta packages.
 ## Step 12: Boot into the system
 
 You can now boot into the system.
-You should be greeted by Ubuntu’s login screen just like you normally would.
+You should be greeted by Ubuntu's login screen just like you normally would.
 
 From here, you can configure the system just like you would after exiting the installer.
 
-If you’ve gotten this far congratulations.
-Hopefully you've leared a lot.
+If you've gotten this far congratulations.
+Hopefully you've learned a lot.
 
 If you have any problems either leave a comment or shoot me an email.
-I’m not actively monitoring comments on the site at this time, so an email should get my attention sooner.
+I'm not actively monitoring comments on the site at this time, so an email should get my attention sooner.
 
 ## References
 
-* [Installing Ubuntu from a Unix/Linux System](https://help.ubuntu.com/lts/installation-guide/armhf/apds04.html)
+* [Installing Ubuntu from a Unix/Linux System](https://web.archive.org/web/20220215031455/https://help.ubuntu.com/lts/installation-guide/armhf/apds04.html)

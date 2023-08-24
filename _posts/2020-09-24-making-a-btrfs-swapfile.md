@@ -1,8 +1,11 @@
 ---
 layout: post
 title:  Making a Btrfs Swapfile
-categories: tech
-tags: btrfs linux
+categories: 
+  - tech
+tags: 
+  - btrfs
+  - linux
 ---
 
 # {{page.title}}
@@ -26,7 +29,7 @@ The reason for creating a subvolume is to avoid problems with snapshotting other
 
 Create and format the file.
 The file must be fully allocated and not contain any holes.
-For the size of the file, I follow Red Hat’s recommendation of 20% of your system ram.
+For the size of the file, I follow Red Hat's recommendation of 20% of your system ram.
 I have 8GB of ram, which I rounded up to 2GB of swap.
 
 ```

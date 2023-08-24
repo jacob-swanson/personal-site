@@ -1,19 +1,24 @@
 ---
 layout: post
-title:  Capturing game audio separately using ShadowPlay and Voicemeeter Banana 
-categories: tech
-tags: windows shadowplay capture voicemeeter
+title: Capturing game audio separately using ShadowPlay and Voicemeeter Banana 
+categories:
+   - tech
+tags:
+   - windows
+   - shadowplay
+   - capture
+   - voicemeeter
 ---
 
 # {{page.title}}
 
 This will explain how I setup ShadowPlay and Voicemeeter Banana to record game audio in one track and mic/desktop audio in another.
 
-What’s ShadowPlay?
+What's ShadowPlay?
 It uses your NVIDIA graphics card to capture video with very little performance impact.
 
-What’s Voicemeeter?
-It’s a virtual audio mixer for Windows.
+What's Voicemeeter?
+It's a virtual audio mixer for Windows.
 The Banana version is more advanced and has two virtual inputs/outputs which we need for this setup.
 
 ## Setup Voicemeeter Banana
@@ -44,7 +49,7 @@ Enable recording audio to separate tracks, and have it always enabled.
    This will be your default output device.
 1. Select your speakers as the A1 output using the WDM option.
 
-Here’s what mine looks like.
+Here's what mine looks like.
 
 ![Voicemeeter Setup](/assets/voicemeeter-setup.png)
 

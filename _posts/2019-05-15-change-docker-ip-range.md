@@ -1,13 +1,16 @@
 ---
 layout: post
 title: Make Docker use different IP ranges on Linux
-categories: tech
-tags: linux docker
+categories: 
+  - tech
+tags: 
+  - linux
+  - docker
 ---
 
 # {{page.title}}
 
-In this post, you’ll find out how to configure the IP ranges that Docker uses for its networks.
+In this post, you'll find out how to configure the IP ranges that Docker uses for its networks.
 
 TL;DR put this into `/etc/docker/daemon.json`.
 
@@ -25,7 +28,7 @@ TL;DR put this into `/etc/docker/daemon.json`.
 
 And restart Docker with `sudo systemctl restart docker`.
 
-* **bip** -- specifies the IP address and netmask to use for Docker’s default bridge using standard CIDR notation.
+* **bip** -- specifies the IP address and netmask to use for Docker's default bridge using standard CIDR notation.
   New containers will use IP addresses within this range. Existing ones will not be modified.
 
   ```
