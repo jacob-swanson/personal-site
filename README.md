@@ -6,6 +6,7 @@ Code for my personal website.
 
 ## Tech
 
+* GitHub - you are here.
 * Jekyll - easy static site generation.
 * Netlify - hosting, chosen due to supporting preview deploys.
 * Cloudflare - hides my email address from bots.
