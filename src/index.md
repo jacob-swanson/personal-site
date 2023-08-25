@@ -1,4 +1,5 @@
 ---
+enable_fontawesome: true
 layout: default
 ---
 
@@ -8,9 +9,10 @@ layout: default
 </header>
 
 * me
-    * [email]({{ site.data.socials.email_url }})
-    * [GitHub]({{ site.data.socials.github_url }})
-    * [LinkedIn]({{ site.data.socials.linkedin_url }})
+    * <i class="fa-solid fa-envelope"></i> [email]({{ site.data.socials.email_url }}) ({{ site.data.socials.email }})
+    * <i class="fa-brands fa-github"></i> [GitHub]({{ site.data.socials.github_url }})
+    * <i class="fa-brands fa-linkedin"></i> [LinkedIn]({{ site.data.socials.linkedin_url }})
+    * <i class="fa-brands fa-instagram"></i> [Instagram]({{ site.data.socials.instagram_url }})
 * [resume](/resume.html)
 * [privacy](/privacy.html)
 * thoughts

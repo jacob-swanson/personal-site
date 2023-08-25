@@ -5,6 +5,7 @@ pkgs.mkShell {
     bundler
     just
     nixpkgs-fmt
+    minify
   ];
   env = {
     LD_LIBRARY_PATH = "${pkgs.curl.out}/lib:$LD_LIBRARY_PATH";
