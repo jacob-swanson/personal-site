@@ -1,10 +1,8 @@
+set shell := ["nix-shell", "--run"]
+
 # Display recipes
 @help:
     just --list --unsorted
-
-# Enter nix shell
-shell:
-    nix-shell
 
 # Build site
 build:
