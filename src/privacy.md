@@ -3,22 +3,23 @@ layout: page
 title: Privacy Policy
 ---
 
-## Personal Data
+Personal data is processed for the following purposes and using the following services:
 
-Personal data is collected for the following purposes using the following 3rd party services.
-
-### Analytics
-
-* Google Analytics [[Privacy Policy](https://policies.google.com/privacy?hl=en-US)] - Cookies and usage data.
-
-### Hosting Infrastructure
-
-* Cloudflare [[Privacy Policy](https://www.cloudflare.com/privacypolicy/)] - Cookies and various types of data as specified in their privacy policy.
-* Netlify [[Privacy Policy](https://www.netlify.com/privacy/)] - Data communicated while using the service.
-
-### Comments
-
-* Utterances [[Privacy Policy](https://github.com/utterance/utterances/blob/master/PRIVACY-POLICY.md)] - Data communicated while using the service.
+* Google Analytics ([Privacy Policy](https://policies.google.com/privacy?hl=en))
+    * Usage: Analytics
+    * Personal data: Cookies; Usage Data
+* Google Tag Manager ([Privacy Policy](https://policies.google.com/privacy?hl=en))
+    * Usage: Tag management
+    * Personal data: Usage Data
+* Netlify ([Privacy Policy](https://www.netlify.com/privacy/))
+    * Usage: Hosting and backend infrastructure
+    * Personal data: Data communicated while using the service
+* Cloudflare ([Privacy Policy](https://www.cloudflare.com/privacypolicy/))
+    * Usage: Traffic optimization and distribution
+    * Personal data: Cookies; various types of data as specified in the privacy policy of the service
+* Utterances ([Privacy Policy](https://github.com/utterance/utterances/blob/master/PRIVACY-POLICY.md))
+    * Usage: GitHub-powered comments
+    * Personal data: Data communicated while using the service
 
 ## Contact Me
 
