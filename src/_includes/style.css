@@ -140,3 +140,9 @@ a:visited {
 .centered {
     text-align: center;
 }
+
+.resume-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
