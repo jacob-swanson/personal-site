@@ -14,7 +14,7 @@ Jekyll::Hooks.register(:site, :post_write, priority: HIGHEST_PRIORITY) do |site|
       :check_img_http => true,
       :disable_external => false,
       :only_4xx => true,
-      :ignore_status_codes => [403],
+      :ignore_status_codes => [403, 429],
       :report_invalid_tags => true,
       :cache => { :timeframe => { external: '2w' }, :storage_dir => '.htmlproofer-cache' },
       :typhoeus => {
