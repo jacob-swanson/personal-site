@@ -37,7 +37,7 @@ Austin, TX
 * Led the development of the Platform, a modern RESTful API replacement for a legacy PHP system.
     * Embraced an API-first approach, enabling seamless integration for internal teams and external customers.
     * Collaborated with product management to develop roadmaps and determine technical details.
-    * Engineered a resilient event-driven system, cutting lead and job application delivery time from 10 minutes to seconds.
+    * Engineered a resilient event-driven system, cutting lead and job application delivery time from 10 minutes to 1 second.
     * Developed in Java using Spring Boot with AWS services such as S3, API Gateway, ECS, DynamoDB, Lambda, SQS, and more.
     * Created a secure and versatile CRUD framework tailored to the existing MySQL database schema using Spring Security and Spring Data JPA.
 * Collaborated to resolve operational and scaling issues.
