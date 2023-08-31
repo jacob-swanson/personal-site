@@ -16,11 +16,11 @@ I'm excited to connect, collaborate, and contribute to meaningful software engin
 
 # Technical Skills
 
-|:-------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Languages            | Java, PHP, SQL, TypeScript, JavaScript, HTML, CSS                                                                                                   |
-| Tools                | Spring Boot, Hibernate, MySQL, PostgreSQL, Redis, Solr                                                                                              |
-| Cloud Services (AWS) | ECS, EC2, Fargate, RDS, ElastiCache, CloudFormation, S3, CloudWatch, Cognito, SQS, SNS, Event Bridge, Kinesis, API Gateway, Lambda, Batch, DynamoDB |
-| DevOps               | Linux, Docker, Azure DevOps, Azure Pipelines, AWS CDK, New Relic, PagerDuty, Renovate                                                               |
+|:-------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Languages            | Java, PHP, SQL, TypeScript, JavaScript, HTML, CSS                                                                                                               |
+| Tools                | Spring Boot, Hibernate, MySQL, PostgreSQL, Redis, Solr                                                                                                          |
+| Cloud Services (AWS) | ECS, EC2, Fargate, RDS, ElastiCache, CloudFormation, S3, CloudWatch, CloudTrail, Cognito, SQS, SNS, Event Bridge, Kinesis, API Gateway, Lambda, Batch, DynamoDB |
+| DevOps               | Linux, Docker, Azure DevOps, Azure Pipelines, AWS CDK, New Relic, PagerDuty                                                                                     |
 
 # Employment
 
@@ -37,18 +37,19 @@ Austin, TX
 * Led the development of the Platform, a modern RESTful API replacement for a legacy PHP system.
     * Embraced an API-first approach, enabling seamless integration for internal teams and external customers.
     * Collaborated with product management to develop roadmaps and determine technical details.
-    * Engineered a resilient event-driven system, cutting lead and job application delivery time from 10 minutes to 1 second.
+    * Engineered a resilient event-driven system using AWS Event Bus, cutting lead and job application delivery time from 10 minutes to 1 second, increasing customer conversion rates.
     * Developed in Java using Spring Boot with AWS services such as S3, API Gateway, ECS, DynamoDB, Lambda, SQS, and more.
     * Created a secure and versatile CRUD framework tailored to the existing MySQL database schema using Spring Security and Spring Data JPA.
 * Collaborated to resolve operational and scaling issues.
   * Leveraged New Relic and YourKit to analyze code performance and implemented improvements based on profiling insights.
   * Achieved 99.9% uptime on jobs2careers.com, efficiently handling up to 150k requests per minute.
   * Replaced a file-based PHP caching system with a more efficient Redis-based solution, addressing CPU overload issues.
-  * Optimized job import system to increase maximum horizontal scalability from 10–20 machines to 150+, processing up to 250 million jobs per day.
+  * Optimized job import system to increase maximum horizontal scalability from 10 to 20 machines to 150+, processing up to 250 million jobs per day.
   * Addressed data reliability issues with the job import system by adopting RDS PostgreSQL, implementing concurrency controls, and utilizing AWS Kinesis for streaming.
   * Played a pivotal role in identifying and addressing issues within the budgeting system, reducing overspending to less than $1 per customer.
 * Enhanced system observability by implementing comprehensive monitoring and alerting using AWS CloudWatch.
 * Built and maintained CI/CD pipelines for new and existing software using Azure DevOps with Ansible, CloudFormation, and CDK.
+* Automated software dependency upgrades using Renovate Bot, saving engineering time and reducing response time to security vulnerabilities.
 * Orchestrated the upgrades of Java, PHP, and NodeJS, taking advantage of performance improvements and ensuring compatibility.
 * Worked with the infrastructure team to seamlessly upgrade software such as MySQL, PostgreSQL, Redis, and Solr.
 * Provided comprehensive support to the sales department by demonstrating proactive troubleshooting and implementing bug fixes and minor features.
