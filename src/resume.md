@@ -54,7 +54,7 @@ Austin, TX
 * Worked with the infrastructure team to seamlessly upgrade software such as MySQL, PostgreSQL, Redis, and Solr.
 * Provided comprehensive support to the sales department by demonstrating proactive troubleshooting and implementing bug fixes and minor features.
 
-## [Geeks and Nerds (GaN)](https://www.geeksandnerds.com/)
+## [Geeks and Nerds](https://www.geeksandnerds.com/)
 
 **Software Engineer**<br/>
 September 2014 – October 2016 _(2 years 2 months)_<br/>
