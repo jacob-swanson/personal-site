@@ -15,5 +15,5 @@ layout: default
     * <i class="fa-brands fa-instagram"></i> [Instagram]({{ site.data.socials.instagram_url }})
 * [resume](/resume.html)
 * [privacy](/privacy.html)
-* thoughts
+* posts
   {% include post_list.md spaces="  " %}
