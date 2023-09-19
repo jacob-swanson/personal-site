@@ -1,4 +1,4 @@
-set shell := ["nix-shell", "--run"]
+set shell := ["nix-shell", "--pure", "--run"]
 
 # Display recipes
 @help:

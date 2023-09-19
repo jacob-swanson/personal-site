@@ -2,6 +2,7 @@
 pkgs.mkShell {
   buildInputs = with pkgs.buildPackages; [
     ruby
+    rubyPackages.eventmachine
     bundler
     just
     nixpkgs-fmt
