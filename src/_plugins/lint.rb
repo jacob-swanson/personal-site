@@ -6,7 +6,7 @@ require "html-proofer"
 # https://github.com/episource/jekyll-html-proofer/blob/master/jekyll-html-proofer.rb
 
 enable_html_proofer = ENV['ENABLE_HTML_PROOFER'] || 'true'
-if enable_html_proofer
+if 'true'.casecmp(enable_html_proofer) == 0
   HIGHEST_PRIORITY = Jekyll::Hooks::PRIORITY_MAP[:high] + 1000
 
   Jekyll::Hooks.register(:site, :post_write, priority: HIGHEST_PRIORITY) do |site|
