@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: post_with_toc
+created_date: 2018-11-26
 title: 3D Printer PID Tuning with OctoPrint
 categories:
   - tech
@@ -7,8 +8,6 @@ tags:
   - 3dprinting
   - octoprint
 ---
-
-# {{page.title}}
 
 What you'll need
 

@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: post_with_toc
+created_date: 2019-02-24
 title: Flashing LineageOS 14.1 to a Nexus 7 (2012)
 categories:
   - tech
@@ -10,8 +11,6 @@ tags:
   - lineage
   - lineageos
 ---
-
-# {{page.title}}
 
 ![Nexus 7 (2012)](/assets/nexus-7-2012.png)
 

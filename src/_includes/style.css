@@ -38,6 +38,7 @@
 
 :root {
     --color-background: #1a1a1a;
+    --color-background-toc: #151515;
     --color-background-code: black;
     --color-text-primary: #dddddd;
     --color-text-accent: #a0a0a0;
@@ -146,9 +147,27 @@ a:visited {
     flex-direction: row;
     justify-content: space-between;
 }
-
 @media screen and (max-width: 600px) {
     .resume-header {
         flex-direction: column;
     }
+}
+
+.post-header h1 {
+    margin-bottom: 0;
+}
+.post-header > p {
+    margin-top: 0;
+    color: var(--color-text-accent);
+    font-size: 1rem;
+}
+.post-header > .toc {
+    background: var(--color-background-toc);
+    border-color: var(--color-text-accent);
+    border-style: solid;
+    border-radius: 0.5rem;
+    border-width: thin;
+    padding-left: 1rem;
+    padding-right: 1.5rem;
+    width: fit-content;
 }

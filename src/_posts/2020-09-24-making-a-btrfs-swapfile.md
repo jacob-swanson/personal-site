@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: post_with_toc
+created_date: 2020-09-24
 title: Making a Btrfs Swapfile
 categories:
   - tech
@@ -7,8 +8,6 @@ tags:
   - btrfs
   - linux
 ---
-
-# {{page.title}}
 
 When setting up swap on Btrfs, there are a few extra things to take into consideration.
 

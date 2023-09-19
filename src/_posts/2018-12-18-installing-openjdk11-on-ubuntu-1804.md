@@ -1,5 +1,6 @@
 ---
 layout: post
+created_date: 2018-12-28
 title: Installing the actual OpenJDK 11 on Ubuntu 18.04
 categories:
   - tech
@@ -8,8 +9,6 @@ tags:
   - java
   - openjdk
 ---
-
-# {{page.title}}
 
 When you install OpenJDK on Ubuntu 18.04 (the current LTS release), you actually get OpenJDK 10 masquerading as OpenJDK 11.
 There's plenty of other information out there on why this happened.

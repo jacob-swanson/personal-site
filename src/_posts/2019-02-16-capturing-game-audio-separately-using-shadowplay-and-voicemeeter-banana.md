@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: post_with_toc
+created_date: 2019-02-16
 title: Capturing game audio separately using ShadowPlay and Voicemeeter Banana
 categories:
   - tech
@@ -9,8 +10,6 @@ tags:
   - capture
   - voicemeeter
 ---
-
-# {{page.title}}
 
 This will explain how I set up ShadowPlay and Voicemeeter Banana to record game audio in one track and mic/desktop audio in another.
 

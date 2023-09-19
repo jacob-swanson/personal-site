@@ -1,15 +1,15 @@
 ---
-layout: post
+layout: post_with_toc
+created_date: 2023-09-19
 title: NixOS on Proxmox LXC Setup 
 categories:
   - tech
 tags:
   - linux
   - proxmox
-  - NixOS
+  - nixos
+  - nix
 ---
-
-# {{page.title}}
 
 This guide will explain how to install NixOS in an LXC container in Proxmox.
 
@@ -108,7 +108,7 @@ building the system configuration...
 $ reboot
 ```
 
-## Done
+## Finish
 
 After completing these steps, you will have a NixOS Proxmox LXC up and running!
 

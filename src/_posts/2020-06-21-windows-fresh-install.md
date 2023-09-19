@@ -1,13 +1,12 @@
 ---
-layout: post
+layout: post_with_toc
+created_date: 2020-06-21
 title: How I do a fresh install of Windows
 categories:
   - tech
 tags:
   - windows reset
 ---
-
-# {{page.title}}
 
 This is mostly for me to reference myself, but maybe you'll find this useful and can pick and choose some steps that you like.
 

@@ -1,5 +1,6 @@
 ---
-layout: post
+layout: post_with_toc
+created_date: 2020-07-21
 title: Installing Ubuntu from scratch (without the installer)
 categories:
   - tech
@@ -9,8 +10,6 @@ tags:
   - minimal
   - install
 ---
-
-# {{page.title}}
 
 In this article, I will describe the steps I took to install Ubuntu from scratch.
 This will involve:

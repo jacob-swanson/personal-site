@@ -1,11 +1,10 @@
 ---
 layout: post
+created_date: 2020-06-21
 title: Fixing broken Steam desktop icons
 categories:
   - tech
 ---
-
-# {{page.title}}
 
 If your Steam desktop icons are showing up as ".url" files without their associated icons, then follow these steps.
 
