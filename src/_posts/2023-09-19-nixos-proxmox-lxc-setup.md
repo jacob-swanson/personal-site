@@ -13,7 +13,7 @@ tags:
 
 This guide will explain how to install NixOS in an LXC container in Proxmox.
 
-## Getting a LXC container template into Proxmox
+## Getting an LXC container template into Proxmox
 
 A template can either be downloaded from the Nix pipeline, or built using the Proxmox LXC community generator.
 This file needs to be uploaded to Proxmox as an CT template.
