@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_with_toc
 created_date: 2020-06-21
 title: Fixing broken Steam desktop icons
 categories:

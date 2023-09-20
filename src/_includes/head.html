@@ -4,6 +4,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/assets/favicon/site.webmanifest">
 
+    <link href="/assets/css/main.css" rel="stylesheet">
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-V9Y9SD5M5V"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -12,23 +14,132 @@
             dataLayer.push(arguments);
         }
 
-        gtag('js', new Date());
-        gtag('config', 'G-V9Y9SD5M5V');
+        gtag("js", new Date());
+        gtag("config", "G-V9Y9SD5M5V");
     </script>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
 
-{% seo %}
-{% feed_meta %}
-
-    <style>
-{% include style.css %}
-    </style>
+    {% seo %}
+    {% feed_meta %}
 
     {% if page.enable_fontawesome == true %}
-    <script defer src="/assets/fontawesome/js/brands.min.js"></script>
-    <script defer src="/assets/fontawesome/js/solid.min.js"></script>
-    <script defer src="/assets/fontawesome/js/fontawesome.min.js"></script>
+    <script src="/assets/fontawesome/js/brands.min.js"></script>
+    <script src="/assets/fontawesome/js/solid.min.js"></script>
+    <script src="/assets/fontawesome/js/fontawesome.min.js"></script>
     {% endif %}
+
+    <script>
+        const themeKey = "theme";
+        const darkTheme = "dark";
+        const lightTheme = "light";
+        const darkTailwindClass = "dark";
+
+        /**
+         * Get the system"s native theme.
+         *
+         * @returns {string}
+         */
+        function getSystemTheme() {
+            if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+                return darkTheme;
+            }
+            return lightTheme;
+        }
+
+        /**
+         * Get the theme preference.
+         *
+         * @returns {string}
+         */
+        function getTheme() {
+            return localStorage.getItem(themeKey) ?? getSystemTheme();
+        }
+
+        /**
+         * Store theme preference.
+         *
+         * @param {string} theme
+         */
+        function setTheme(theme) {
+            return localStorage.setItem(themeKey, theme);
+        }
+
+        /**
+         * Apply the given theme.
+         *
+         * @param {string} theme
+         */
+        function applyTheme(theme) {
+            const classList = document.querySelector("html").classList;
+            if (theme === darkTheme) {
+                classList.add(darkTailwindClass);
+            } else {
+                classList.remove(darkTailwindClass);
+            }
+            setUtterancesTheme(theme);
+        }
+
+        /**
+         * Toggle between light and dark mode.
+         */
+        function toggleTheme() {
+            const fromTheme = getTheme();
+            const toTheme = fromTheme === darkTheme ? lightTheme : darkTheme;
+            console.log("Changing theme from", fromTheme, "to", toTheme);
+            applyTheme(toTheme);
+            setTheme(toTheme);
+        }
+
+        /**
+         * Set the utterances theme.
+         *
+         * @param {string} theme
+         */
+        function setUtterancesTheme(theme) {
+            const utterancesThemes = {
+                [darkTheme]: "github-dark",
+                [lightTheme]: "github-light"
+            }
+            const iframe = document.querySelector(".utterances-frame");
+            if (iframe) {
+                const utterancesTheme = utterancesThemes[theme] ?? "github-dark";
+                const message = {
+                    type: "set-theme",
+                    theme: utterancesTheme
+                };
+                iframe.contentWindow.postMessage(message, "https://utteranc.es");
+            }
+        }
+
+        /**
+         * @param {MessageEvent} event
+         */
+        function setUtterancesThemeAfterItLoads(event) {
+            if (event.origin !== "https://utteranc.es") {
+                return;
+            }
+            setUtterancesTheme(getTheme());
+            removeEventListener("message", setUtterancesThemeAfterItLoads);
+        }
+
+        addEventListener("message", setUtterancesThemeAfterItLoads);
+        applyTheme(getTheme());
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const lightSwitch = document.querySelector("#light-switch");
+            if (!lightSwitch) {
+                console.warn("#light-switch not found");
+                return;
+            }
+            const theme = getTheme();
+            lightSwitch.checked = theme === lightTheme;
+            lightSwitch.addEventListener("change", event => {
+                event.preventDefault();
+                toggleTheme();
+                lightSwitch.checked = !!lightSwitch.checked;
+            });
+        });
+    </script>
 </head>

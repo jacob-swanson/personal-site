@@ -3,18 +3,18 @@ layout: resume
 title: Resume
 ---
 
-<h1 class="centered">Jacob Swanson</h1>
+<h1 class="text-center">Jacob Swanson</h1>
 
-<p class="centered">
+<p class="text-center">
 Austin, TX • <a href="{{ site.data.socials.email_url }}">{{ site.data.socials.email }}</a> • <a href="{{ site.data.socials.linkedin_url }}">LinkedIn</a>
 </p>
 
-# About me
+## About me
 
 Throughout my decade-long journey in software engineering, I've dedicated myself to achieving technical excellence and finding elegant solutions to complex problems. 
 I'm excited to connect, collaborate, and contribute to meaningful software engineering projects that make a real impact.
 
-# Technical Skills
+## Technical Skills
 
 |:-------------------- |:--------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Languages            | Java, PHP, SQL, TypeScript, JavaScript, HTML, CSS                                                                                                               |
@@ -22,9 +22,9 @@ I'm excited to connect, collaborate, and contribute to meaningful software engin
 | Cloud Services (AWS) | ECS, EC2, Fargate, RDS, ElastiCache, CloudFormation, S3, CloudWatch, CloudTrail, Cognito, SQS, SNS, Event Bridge, Kinesis, API Gateway, Lambda, Batch, DynamoDB |
 | DevOps               | Linux, Docker, Azure DevOps, Azure Pipelines, AWS CDK, New Relic, PagerDuty                                                                                     |
 
-# Employment
+## Employment
 
-## [Talroo (Formerly Jobs2Careers)](https://www.talroo.com/)
+### [Talroo (Formerly Jobs2Careers)](https://www.talroo.com/)
 
 **Senior Software Engineer**<br/>
 August 2019 – August 2023 _(4 years 1 month)_<br/>
@@ -54,7 +54,7 @@ Austin, TX
 * Worked with the infrastructure team to seamlessly upgrade software such as MySQL, PostgreSQL, Redis, and Solr.
 * Provided comprehensive support to the sales department by demonstrating proactive troubleshooting and implementing bug fixes and minor features.
 
-## [Geeks and Nerds](https://www.geeksandnerds.com/)
+### [Geeks and Nerds](https://www.geeksandnerds.com/)
 
 **Software Engineer**<br/>
 September 2014 – October 2016 _(2 years 2 months)_<br/>
@@ -70,7 +70,7 @@ Huntsville, AL
 * Engineered Acronytor, a Visual Basic application that automated the creation of acronym lists in Microsoft Word documents for government contracts.
 * Collaborated with senior engineers on bug fixes and new features for an aviation testing system using C++ and Qt.
 
-## [Mentor Graphics](https://www.mentor.com/)
+### [Mentor Graphics](https://www.mentor.com/)
 
 **Intern Software Engineer**<br/>
 January 2013 – August 2013 _(8 months)_<br/>
@@ -82,7 +82,7 @@ Huntsville, AL
 * Authored documentation for the diverse test suites, accelerating the onboarding process.
 * Actively monitored and analyzed automated test results to proactively identify regressions, enabling swift corrective actions.
 
-## [Alabama A&M University](https://www.aamu.edu/) / [University of Alabama in Huntsville](https://www.uah.edu/)
+### [Alabama A&M University](https://www.aamu.edu/) / [University of Alabama in Huntsville](https://www.uah.edu/)
 
 **Contract Developer** / **Student Researcher**<br/>
 June 2011 – August 2011 _(3 months)_<br/>
@@ -93,9 +93,9 @@ Huntsville, AL
   * Created an Arduino-powered demonstration that synced audio and visual cues to demonstrate a home rain-capture system.
 * Implemented a proof-of-concept library in C++ to confirm students could use the Unreal Development Kit to visualize their N-body MATLAB simulations.
 
-# Education
+## Education
 
-## [University of Alabama in Huntsville](https://www.uah.edu/)
+### [University of Alabama in Huntsville](https://www.uah.edu/)
 
 **Bachelor of Science, Computer Engineering**<br/>
 December 2014

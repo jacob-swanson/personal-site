@@ -7,6 +7,7 @@ pkgs.mkShell {
     just
     nixpkgs-fmt
     minify
+    nodejs
   ];
   env = {
     LD_LIBRARY_PATH = "${pkgs.curl.out}/lib:$LD_LIBRARY_PATH";
