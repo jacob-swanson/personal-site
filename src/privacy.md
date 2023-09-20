@@ -17,7 +17,7 @@ Personal data is processed for the following purposes and using the following se
 * Cloudflare ([Privacy Policy](https://www.cloudflare.com/privacypolicy/))
     * Usage: Traffic optimization and distribution
     * Personal data: Cookies; various types of data as specified in the privacy policy of the service
-* Utterances ([Privacy Policy](https://github.com/utterance/utterances/blob/master/PRIVACY-POLICY.md))
+* Giscus ([Privacy Policy](https://github.com/giscus/giscus/blob/main/PRIVACY-POLICY.md))
     * Usage: GitHub-powered comments
     * Personal data: Data communicated while using the service
 
