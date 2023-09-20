@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_with_toc
 created_date: 2019-11-08
 title: Managing multiple AWS Consoles with JumpCloud and Firefox
 categories:

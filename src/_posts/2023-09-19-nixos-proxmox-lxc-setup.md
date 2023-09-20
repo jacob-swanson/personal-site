@@ -79,7 +79,7 @@ Enter `root` for the username and `nixos` for the password, unless it was change
 
 Go ahead and set a new root password now, if you haven't already.
 ```
-$ password
+# password
 New password: 
 Retype new password: 
 passwd: password updated successfully
@@ -87,13 +87,13 @@ passwd: password updated successfully
 
 Initialize [nixpkgs](https://github.com/NixOS/nixpkgs).
 ```
-$ nix-channel update
+# nix-channel update
 unpacking channels...
 ```
 
 Initialize `/etc/nixos/configuration.nix` using this minimal example.
 ```
-$ cat > /etc/nixos/configuration.nix <<EOF
+# cat > /etc/nixos/configuration.nix <<EOF
 { modulesPath, ... }: {  
   imports = [ (modulesPath + "/virtualisation/proxmox-lxc.nix") ];  
 }
@@ -102,10 +102,10 @@ EOF
 
 Apply any newer changes since the template was created and reboot.
 ```
-$ nixos-rebuild switch
+# nixos-rebuild switch
 building Nix...
 building the system configuration...
-$ reboot
+# reboot
 ```
 
 ## Finish

@@ -2,17 +2,24 @@
 layout: default
 ---
 
-<a href="/" class="backlink">..</a>
-<div class="post-header">
+{% include backlink.html %}
+<div>
     <h1>{{ page.title }}</h1>
-    <p>{{ page.created_date | date_to_long_string: "ordinal", "US"}} {% include reading-time.html %}</p>
-    <div class="toc">
-        <p>Table of Contents</p>
-        {% include toc.html html=content %}
+    <div class="text-sm mt-0.5">{{ page.created_date | date_to_long_string: "ordinal", "US"}} {% include reading-time.html %}</div>
+    {% capture toc_content %} {% include toc.html html=content %} {% endcapture %}
+    {% assign toc_stripped = toc_content | strip %}
+    {% if toc_stripped != "" %}
+    <div class="rounded-md border-2 dark:border-zinc-600 mt-5 py-4 pl-3 pr-6 w-fit">
+        <div>Table of Contents</div>
+        {{ toc_content }}
     </div>
+    {% endif %}
 </div>
+<article>
 {{ content }}
-<script src="https://utteranc.es/client.js"
+</article>
+<script id="utterances"
+        src="https://utteranc.es/client.js"
         repo="jacob-swanson/personal-site"
         issue-term="pathname"
         theme="github-dark"

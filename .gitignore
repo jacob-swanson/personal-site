@@ -1,3 +1,4 @@
 _site/
 .htmlproofer-cache/
 .idea/
+node_modules/

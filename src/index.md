@@ -3,10 +3,8 @@ enable_fontawesome: true
 layout: default
 ---
 
-<header>
-  <h1>{{ site.title }}</h1>
-  <p>Hi, I'm a software engineer living and working in Austin, TX.</p>
-</header>
+# Jacob Swanson
+Hi, I'm a software engineer living and working in Austin, TX.
 
 * me
     * <i class="fa-solid fa-envelope"></i> [email]({{ site.data.socials.email_url }}) ({{ site.data.socials.email }})

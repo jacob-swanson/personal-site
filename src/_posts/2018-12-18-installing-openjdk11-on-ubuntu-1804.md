@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: post_with_toc
 created_date: 2018-12-28
 title: Installing the actual OpenJDK 11 on Ubuntu 18.04
 categories:

@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 {%- include head.html -%}
-<body>
-<main class="page-content" aria-label="Content">
-    <div class="w">
-        {{ content }}
-    </div>
+<body class="dark:bg-zinc-900 m-5">
+<main class="container mx-auto max-w-5xl
+             prose dark:prose-invert prose-lg
+             prose-h1:mb-0
+             prose-li:m-0
+             prose-ul:m-0
+             prose-table:dark:text-current
+             visited:dark:prose-a:text-zinc-400
+             visited:prose-a:text-zinc-500"
+      aria-label="Content">
+    {%- include toggle_mode.html -%}
+    {{ content }}
 </main>
 </body>
 </html>
