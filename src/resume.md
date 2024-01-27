@@ -30,7 +30,7 @@ I'm excited to connect, collaborate, and contribute to meaningful software engin
 December 2023 – Present<br/>
 Austin, TX
 
-* Contributing to the success of [OCI Container Instances](https://www.oracle.com/cloud/cloud-native/container-instances/).
+Contributing to the success of [OCI Container Instances](https://www.oracle.com/cloud/cloud-native/container-instances/).
 
 ### [Talroo (Formerly Jobs2Careers)](https://www.talroo.com/)
 
