@@ -5,11 +5,8 @@ title: Privacy Policy
 
 Personal data is processed for the following purposes and using the following services:
 
-* Google Analytics ([Privacy Policy](https://policies.google.com/privacy?hl=en))
+* Plausible (Self-Hosted) ([Privacy Policy](https://plausible.io/privacy), [Data Policy](https://plausible.io/data-policy))
     * Usage: Analytics
-    * Personal data: Cookies; Usage Data
-* Google Tag Manager ([Privacy Policy](https://policies.google.com/privacy?hl=en))
-    * Usage: Tag management
     * Personal data: Usage Data
 * Netlify ([Privacy Policy](https://www.netlify.com/privacy/))
     * Usage: Hosting and backend infrastructure
