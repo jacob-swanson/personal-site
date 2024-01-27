@@ -24,6 +24,14 @@ I'm excited to connect, collaborate, and contribute to meaningful software engin
 
 ## Employment
 
+### [Oracle Cloud Infrastructure (OCI)](https://www.oracle.com/cloud/)
+
+**Senior Member of Technical Staff**<br/>
+December 2023 – Present<br/>
+Austin, TX
+
+* Contributing to the success of [OCI Container Instances](https://www.oracle.com/cloud/cloud-native/container-instances/).
+
 ### [Talroo (Formerly Jobs2Careers)](https://www.talroo.com/)
 
 **Senior Software Engineer**<br/>
@@ -34,25 +42,16 @@ Austin, TX
 April 2017 – August 2019 _(2 years 5 months)_<br/>
 Austin, TX
 
-* Led the development of the Platform, a modern RESTful API replacement for a legacy PHP system.
-    * Embraced an API-first approach, enabling seamless integration for internal teams and external customers.
-    * Collaborated with product management to develop roadmaps and determine technical details.
-    * Engineered a resilient event-driven system using AWS Event Bus, cutting lead and job application delivery time from 10 minutes to 1 second, increasing customer conversion rates.
-    * Developed in Java using Spring Boot with AWS services such as S3, API Gateway, ECS, DynamoDB, Lambda, SQS, and more.
-    * Created a secure and versatile CRUD framework tailored to the existing MySQL database schema using Spring Security and Spring Data JPA.
-* Collaborated to resolve operational and scaling issues.
-  * Leveraged New Relic and YourKit to analyze code performance and implemented improvements based on profiling insights.
-  * Achieved 99.9% uptime on jobs2careers.com, efficiently handling up to 150k requests per minute.
-  * Replaced a file-based PHP caching system with a more efficient Redis-based solution, addressing CPU overload issues.
-  * Optimized job import system to increase maximum horizontal scalability from 10 to 20 machines to 150+, processing up to 250 million jobs per day.
-  * Addressed data reliability issues with the job import system by adopting RDS PostgreSQL, implementing concurrency controls, and utilizing AWS Kinesis for streaming.
-  * Played a pivotal role in identifying and addressing issues within the budgeting system, reducing overspending to less than $1 per customer.
-* Enhanced system observability by implementing comprehensive monitoring and alerting using AWS CloudWatch.
-* Built and maintained CI/CD pipelines for new and existing software using Azure DevOps with Ansible, CloudFormation, and CDK.
-* Automated software dependency upgrades using Renovate Bot, saving engineering time and reducing response time to security vulnerabilities.
-* Orchestrated the upgrades of Java, PHP, and NodeJS, taking advantage of performance improvements and ensuring compatibility.
-* Worked with the infrastructure team to seamlessly upgrade software such as MySQL, PostgreSQL, Redis, and Solr.
-* Provided comprehensive support to the sales department by demonstrating proactive troubleshooting and implementing bug fixes and minor features.
+* Led initiative to modernize the existing PHP system by designing and developing secure services and APIs using Java, MySQL, Redis, and Solr, while leveraging many AWS services.
+  * Worked with cross-functional agile teams to launch products including the Talroo Ad Platform, Talroo Pro, and Talroo Insights, driving company growth and expanding the product portfolio.
+  * Designed and developed an event-driven system, reducing application and lead delivery from 10 minutes to seconds, leading to a significant increase in conversion rates.
+* Mentored junior engineers, providing guidance in architecture, best practices, and effective problem-solving, contributing to improved performance and confidence.
+* Played a pivotal role in operating and scaling the job import, export, and search data pipelines.
+* Collaborated with data engineering teams to implement machine learning for feature extraction from job descriptions, resulting in improved relevance and performance for job searches.
+* Participated in company-wide training sessions and product demos, effectively conveying technical progress and new features, fostering a better understanding and engagement across the organization.
+* Successfully maintained a 99.95% uptime for critical data collection and job search APIs, while also optimizing for minimal latency.
+* Orchestrated and executed seamless upgrades of software and infrastructure.
+* Collaborated with DevOps to build and maintain CI/CD pipelines for efficient software deployments and updates.
 
 ### [Geeks and Nerds](https://www.geeksandnerds.com/)
 
@@ -60,15 +59,7 @@ Austin, TX
 September 2014 – October 2016 _(2 years 2 months)_<br/>
 Huntsville, AL
 
-* Independently developed high-quality and well-documented software, demonstrating self-reliance and strong technical skills.
-* Collaborated within a small agile team to develop RAGE, a web-based content management system designed to optimize data collection and sharing at test events using Spring Boot and Angular.
-* Enhanced RAGE by introducing features like Active Directory authentication with smart cards, robust security measures, and flexible metadata collection.
-* Implemented continuous integration pipelines using GitLab CI, automating code analysis through SonarQube for improved code quality.
-* Contributed to customer support, bug fixes, and features for CabuzTime, a government-approved timekeeping application using Java.
-* Automated the billing and registration process for CabuzTime using Stripe, streamlining administrative tasks and improving user experience.
-* Developed a kiosk-style web application for displaying solar panel statistics using Spring Boot, Angular, and D3 to create an informative and user-friendly interface.
-* Engineered Acronytor, a Visual Basic application that automated the creation of acronym lists in Microsoft Word documents for government contracts.
-* Collaborated with senior engineers on bug fixes and new features for an aviation testing system using C++ and Qt.
+* Collaborated within agile teams to develop software solutions for the defense industry utilizing Java, C++, and C#, contributing to the acquisition and successful delivery of contracts on time and within budget.
 
 ### [Mentor Graphics](https://www.mentor.com/)
 
@@ -76,11 +67,7 @@ Huntsville, AL
 January 2013 – August 2013 _(8 months)_<br/>
 Huntsville, AL
 
-* Worked within a Scrum-based engineering team focused on testing a web application framework using Java aimed to bring electronic design, automation, and simulation to the web browser.
-* Developed unit and integration tests in Java using TestNG to find bugs, detect regressions, and to achieve code and branch coverage goals.
-* Collaborated to create performance tests using HP LoadRunner and Performance Center, ensuring optimal application performance.
-* Authored documentation for the diverse test suites, accelerating the onboarding process.
-* Actively monitored and analyzed automated test results to proactively identify regressions, enabling swift corrective actions.
+* Developed and monitored unit, integration, and performance tests in Java to find bugs and detect regressions, achieving code and branch coverage goals.
 
 ### [Alabama A&M University](https://www.aamu.edu/) / [University of Alabama in Huntsville](https://www.uah.edu/)
 
@@ -88,10 +75,7 @@ Huntsville, AL
 June 2011 – August 2011 _(3 months)_<br/>
 Huntsville, AL
 
-* Collaborated with a small team across two local universities to create Water Wheels, a mobile lab for teaching outdoor water conservation.
-  * Developed a simple educational video game using the Unreal Development Kit.
-  * Created an Arduino-powered demonstration that synced audio and visual cues to demonstrate a home rain-capture system.
-* Implemented a proof-of-concept library in C++ to confirm students could use the Unreal Development Kit to visualize their N-body MATLAB simulations.
+* Collaborated with a small team to create “Water Wheels”, a mobile lab for teaching water conservation to children using an educational video game and an audiovisual home rain-capture system demonstration.
 
 ## Education
 
