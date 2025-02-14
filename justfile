@@ -1,5 +1,3 @@
-set shell := ["nix-shell", "--pure", "--run"]
-
 # Display recipes
 @help:
     just --list --unsorted
@@ -20,13 +18,25 @@ build:
 clean:
     rm -r _site/ .htmlproofer-cache/
 
-# Update gems
-update-dependencies:
+# Update dependencies
+update-dependencies: update-dependencies-ruby update-dependencies-node
+
+# Update ruby dependencies
+update-dependencies-ruby:
     bundle update
+    # Generate gemset.nix from Gemfile.lock
+    bundle lock
+    bundix
+
+# Update node dependencies
+update-dependencies-node:
+    npm update
+    node2nix -l
+    rm -r node_modules
 
 # Format supported files
 format:
-    nixpkgs-fmt shell.nix
+    nixfmt *.nix
 
 # Minify supported files
 minify:

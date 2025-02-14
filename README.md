@@ -11,9 +11,9 @@ Code for my personal website.
 * Netlify - hosting, chosen due to supporting preview deploys.
 * Cloudflare - hides my email address from bots.
 * Utterances - user comments powered by GitHub.
-* Google Analytics - allows me to see if my content is being read.
+* Plausible - self-hosted web analytics.
 * Font Awesome - social icons; manually patched to remove unnecessary icons for best performance.
-    * They do have a slight layout shift which is a little annoying.
+    * They do cause a slight layout shift which is a little annoying.
 
 ## Running locally
 

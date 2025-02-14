@@ -1,10 +1,10 @@
 source "https://rubygems.org"
-gem "jekyll", "~> 4.3.2"
+gem "jekyll"
 group :jekyll_plugins do
-  gem "jekyll-feed", "~> 0.17.0"
-  gem "jekyll-seo-tag", "~> 2.8"
-  gem "jekyll-sitemap", "~> 1.4"
-  gem "jekyll-last-modified-at", "~> 1.3"
+  gem "jekyll-feed"
+  gem "jekyll-seo-tag"
+  gem "jekyll-sitemap"
+  gem "jekyll-last-modified-at"
   gem "jekyll-postcss"
 end
-gem "html-proofer", "~> 5.0.8"
+gem "html-proofer"
