@@ -15,17 +15,18 @@
       ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
       packageJson = builtins.fromJSON (builtins.readFile ./package.json);
-        # https://nixos.org/manual/nixpkgs/stable/#javascript-tool-specific
-      package = pkgs.buildNpmPackage rec {
-                            pname = packageJson.name;
-                            version = packageJson.version;
-                            src = ./.;
-                            npmDepsHash = "sha256-jWXhZkQsPNjD2EiBtf7L+Y4iqvEnpc4X5bvSP9MOv4w=";
-                            installPhase = ''
-                              mkdir -p $out
-                              cp -r dist/* $out/
-                            '';
-                          };
+      package =
+        { pkgs }:
+        pkgs.buildNpmPackage {
+          pname = packageJson.name;
+          version = packageJson.version;
+          src = ./.;
+          npmDepsHash = "sha256-jWXhZkQsPNjD2EiBtf7L+Y4iqvEnpc4X5bvSP9MOv4w=";
+          installPhase = ''
+            mkdir -p $out
+            cp -r dist/* $out/
+          '';
+        };
     in
     {
       devShells = forAllSystems (
@@ -50,7 +51,8 @@
           pkgs = import nixpkgs { inherit system; };
         in
         {
-          default = package;
+          # https://nixos.org/manual/nixpkgs/stable/#javascript-tool-specific
+          default = package { inherit pkgs; };
         }
       );
 
@@ -88,7 +90,7 @@
               type = lib.types.str;
             };
             package = lib.mkOption {
-              default = package;
+              default = package { inherit pkgs; };
               type = lib.types.package;
             };
           };
