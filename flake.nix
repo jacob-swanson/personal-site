@@ -15,13 +15,14 @@
       ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
       packageJson = builtins.fromJSON (builtins.readFile ./package.json);
+      # https://nixos.org/manual/nixpkgs/stable/#javascript-tool-specific
       buildPackage =
         { pkgs }:
         pkgs.buildNpmPackage {
           pname = packageJson.name;
           version = packageJson.version;
           src = ./.;
-          npmDepsHash = "sha256-jWXhZkQsPNjD2EiBtf7L+Y4iqvEnpc4X5bvSP9MOv4w=";
+          npmDepsHash = "sha256-l07pYFxemzGWPhzre99ev5lqsmL1uZLNov0CxMZTUKw=";
           installPhase = ''
             mkdir -p $out
             cp -r dist/* $out/
@@ -40,6 +41,7 @@
             nativeBuildInputs = with pkgs; [
               nixfmt-rfc-style
               nodejs
+              prefetch-npm-deps
             ];
           };
         }
@@ -51,7 +53,6 @@
           pkgs = import nixpkgs { inherit system; };
         in
         {
-          # https://nixos.org/manual/nixpkgs/stable/#javascript-tool-specific
           default = buildPackage { inherit pkgs; };
         }
       );
