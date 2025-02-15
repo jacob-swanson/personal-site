@@ -15,7 +15,7 @@
       ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
       packageJson = builtins.fromJSON (builtins.readFile ./package.json);
-      package =
+      buildPackage =
         { pkgs }:
         pkgs.buildNpmPackage {
           pname = packageJson.name;
@@ -52,7 +52,7 @@
         in
         {
           # https://nixos.org/manual/nixpkgs/stable/#javascript-tool-specific
-          default = package { inherit pkgs; };
+          default = buildPackage { inherit pkgs; };
         }
       );
 
@@ -90,7 +90,7 @@
               type = lib.types.str;
             };
             package = lib.mkOption {
-              default = package { inherit pkgs; };
+              default = buildPackage { inherit pkgs; };
               type = lib.types.package;
             };
           };
