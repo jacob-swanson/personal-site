@@ -1,6 +1,0 @@
-{% capture words %}
-{{ content | number_of_words | minus: 250 }}
-{% endcapture %}
-{% unless words contains '-' %}
-· {{ words | plus: 250 | divided_by: 200 | append: ' min' }}
-{% endunless %}

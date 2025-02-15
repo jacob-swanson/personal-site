@@ -3,9 +3,7 @@ import {defineConfig} from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import icon from 'astro-icon';
 import {remarkReadingTime} from './remark-reading-time.mjs';
-
 import mdx from '@astrojs/mdx';
-
 import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
