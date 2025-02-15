@@ -1,7 +1,7 @@
 ---
 import './../styles/global.css'
 import BackLink from "../components/BackLink.astro";
-import { ClientRouter } from 'astro:transitions';
+import {ClientRouter} from 'astro:transitions';
 
 const {title, ogTitle, frontmatter} = Astro.props;
 const defaultTitle = "Jacob Swanson";
@@ -23,7 +23,7 @@ const pageTitle = getPageTitle();
     <meta property="og:title" content={ogTitle ?? pageTitle}>
     <title>{pageTitle}</title>
     <script defer data-domain="jacob-swanson.com" src="https://plausible.jacob-swanson.com/js/script.js"/>
-    <link rel="sitemap" href="/sitemap-index.xml" />
+    <link rel="sitemap" href="/sitemap-index.xml"/>
     <ClientRouter/>
 </head>
 <body class="dark:bg-zinc-900 m-5">

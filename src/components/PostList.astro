@@ -7,14 +7,14 @@ const posts = (await getCollection('posts')).sort(
 );
 ---
 <ul>
-{
-    posts.map((post) => (
-    <li>
-        <span>{post.data.pubDate.toLocaleDateString("en-CA")}</span>
-        <a href={`/posts/${stripDate(post.id)}`}>
-            {post.data.title}
-        </a>
-    </li>
+    {
+        posts.map((post) => (
+                <li>
+                    <span>{post.data.pubDate.toLocaleDateString("en-CA")}</span>
+                    <a href={`/posts/${stripDate(post.id)}`}>
+                        {post.data.title}
+                    </a>
+                </li>
         ))
     }
 </ul>

@@ -16,13 +16,15 @@ export async function getStaticPaths() {
 type Props = CollectionEntry<'posts'>;
 
 const post = Astro.props;
-const {Content, headings, remarkPluginFrontmatter } = await render(post);
+const {Content, headings, remarkPluginFrontmatter} = await render(post);
 ---
 
 <Layout {...post.data}>
     <h1>{post.data.title}</h1>
-    <span class="text-sm mt-0.5">{format(post.data.pubDate, "MMMM do, yyyy")} · {remarkPluginFrontmatter.minutesRead}</span>
-    {headings.length > 0 && <TableOfContents headings={headings}/>}
+    <span class="text-sm mt-0.5">{format(post.data.pubDate, "MMMM do, yyyy")}
+        · {remarkPluginFrontmatter.minutesRead}</span>
+    {headings.length > 0 &&
+            <TableOfContents headings={headings}/>}
     <article class="mb-10">
         <Content/>
     </article>
