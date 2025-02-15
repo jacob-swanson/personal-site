@@ -1,6 +1,7 @@
 ---
 import {getCollection} from 'astro:content';
 import {stripDate} from "../utils";
+import Link from "./Link.astro";
 
 const posts = (await getCollection('posts')).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -11,9 +12,9 @@ const posts = (await getCollection('posts')).sort(
         posts.map((post) => (
                 <li>
                     <span>{post.data.pubDate.toLocaleDateString("en-CA")}</span>
-                    <a href={`/posts/${stripDate(post.id)}`}>
+                    <Link href={`/posts/${stripDate(post.id)}`}>
                         {post.data.title}
-                    </a>
+                    </Link>
                 </li>
         ))
     }

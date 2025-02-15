@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import {Icon} from 'astro-icon/components';
 import PostList from "../components/PostList.astro";
+import Link from "../components/Link.astro";
 
 const email = "me@jacob-swanson.com";
 const email_url = `mailto:${email}`;
@@ -20,24 +21,24 @@ const linkedin_url = "https://www.linkedin.com/in/jacob-swanson-1a1660a3";
             <ul>
                 <li>
                     <Icon name="mdi:email-outline"/>
-                    <a href={email_url}>email</a> ({email})
+                    <Link href={email_url}>email</Link> ({email})
                 </li>
                 <li>
                     <Icon name="mdi:github"/>
-                    <a href={github_url}>github</a>
+                    <Link href={github_url}>github</Link>
                 </li>
                 <li>
                     <Icon name="mdi:linkedin"/>
-                    <a href={linkedin_url}>linkedin</a>
+                    <Link href={linkedin_url}>linkedin</Link>
                 </li>
                 <li>
                     <Icon name="mdi:instagram"/>
-                    <a href={instagram_url}>instagram</a>
+                    <Link href={instagram_url}>instagram</Link>
                 </li>
             </ul>
         </li>
-        <li><a href="/resume">resume</a></li>
-        <li><a href="/privacy">privacy</a></li>
+        <li><Link href="/resume">resume</Link></li>
+        <li><Link href="/privacy">privacy</Link></li>
         <li>posts
             <PostList/>
         </li>

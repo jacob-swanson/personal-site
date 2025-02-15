@@ -27,6 +27,7 @@
     "@tailwindcss/typography": "^0.5.16",
     "date-fns": "^4.1.0",
     "mdast-util-to-string": "^4.0.0",
-    "reading-time": "^1.5.0"
+    "reading-time": "^1.5.0",
+    "rehype-external-links": "^3.0.0"
   }
 }

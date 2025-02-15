@@ -1,11 +1,12 @@
 ---
+import Link from "./Link.astro";
 const {heading} = Astro.props;
 ---
 
 <li>
-    <a href={'#' + heading.slug}>
+    <Link href={'#' + heading.slug}>
         {heading.text}
-    </a>
+    </Link>
     {
         heading.subheadings.length > 0 && (
                     <ul>

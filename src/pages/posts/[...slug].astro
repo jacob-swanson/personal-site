@@ -5,6 +5,7 @@ import TableOfContents from "../../components/TableOfContents.astro";
 import Layout from "../../layouts/Layout.astro";
 import {format} from "date-fns";
 import {stripDate} from "../../utils";
+import Link from "../../components/Link.astro";
 
 export async function getStaticPaths() {
     const posts = await getCollection('posts');
@@ -38,7 +39,7 @@ const {Content, headings, remarkPluginFrontmatter} = await render(post);
             data-reactions-enabled="1"
             data-emit-metadata="1"
             data-input-position="top"
-            data-theme="dark"
+            #data-theme="preferred_color_scheme"
             data-lang="en"
             data-loading="lazy"
             crossorigin="anonymous"

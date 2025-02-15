@@ -5,6 +5,7 @@ import icon from 'astro-icon';
 import {remarkReadingTime} from './remark-reading-time.mjs';
 import mdx from '@astrojs/mdx';
 import sitemap from "@astrojs/sitemap";
+import rehypeExternalLinks from "rehype-external-links";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,7 +14,16 @@ export default defineConfig({
         plugins: [tailwindcss()]
     },
     markdown: {
-        remarkPlugins: [remarkReadingTime]
+        remarkPlugins: [remarkReadingTime],
+        rehypePlugins: [
+            [
+                rehypeExternalLinks,
+                {
+                    target: "_blank",
+                    rel: ["noopener noreferrer"]
+                }
+            ]
+        ]
     },
     integrations: [icon(), mdx(), sitemap()],
     redirects: {
