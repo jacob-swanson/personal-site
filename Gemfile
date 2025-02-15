@@ -5,6 +5,6 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
   gem "jekyll-sitemap"
   gem "jekyll-last-modified-at"
-  gem "jekyll-postcss"
+  gem "jekyll-postcss-v2"
 end
 gem "html-proofer"

@@ -2,6 +2,7 @@
   "name": "personal-site",
   "private": true,
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.0.6",
     "@tailwindcss/typography": "^0.5.10",
     "autoprefixer": "^10.4.15",
     "cssnano": "^6.0.6",
@@ -9,8 +10,5 @@
     "postcss": "^8.4.31",
     "postcss-import": "^16.1.0",
     "tailwindcss": "^4.0.6"
-  },
-  "dependencies": {
-    "@tailwindcss/postcss": "^4.0.6"
   }
 }
