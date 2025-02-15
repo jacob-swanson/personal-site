@@ -1,7 +1,13 @@
 {
-  "name": "tremendous-trappist",
+  "name": "personal-site",
   "type": "module",
   "version": "0.0.1",
+  "files": [
+    "dist/",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
