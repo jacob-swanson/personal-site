@@ -1,0 +1,41 @@
+---
+import './../styles/global.css'
+import BackLink from "../components/BackLink.astro";
+
+const {title, ogTitle, frontmatter} = Astro.props;
+const defaultTitle = "Jacob Swanson";
+function getPageTitle() {
+    const pageTitle = title ?? frontmatter?.title;
+    return pageTitle
+        ? `${pageTitle} | ${defaultTitle}`
+        : defaultTitle;
+}
+const pageTitle = getPageTitle();
+---
+<!doctype html>
+<html lang="en" class="dark:bg-zinc-900">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+    <meta name="generator" content={Astro.generator}/>
+    <meta property="og:title" content={ogTitle ?? pageTitle}>
+    <title>{pageTitle}</title>
+    <script defer data-domain="jacob-swanson.com" src="https://plausible.jacob-swanson.com/js/script.js"/>
+    <link rel="sitemap" href="/sitemap-index.xml"/>
+</head>
+<body class="m-5">
+<main class="container mx-auto max-w-5xl
+             prose dark:prose-invert prose-lg
+             prose-h1:mb-0
+             prose-li:m-0
+             prose-ul:m-0
+             prose-table:dark:text-current
+             dark:prose-a:visited:text-zinc-400
+             prose-a:visited:text-zinc-500"
+      aria-label="Content">
+    <BackLink/>
+    <slot/>
+</main>
+</body>
+</html>

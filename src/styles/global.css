@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/*Manually controll dark mode using the dark class*/
+/*@custom-variant dark (&:where(.dark, .dark *));*/
+
+svg[data-icon] {
+    display: inline;
+}

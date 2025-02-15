@@ -1,0 +1,48 @@
+---
+import {type CollectionEntry, getCollection} from 'astro:content';
+import {render} from 'astro:content';
+import TableOfContents from "../../components/TableOfContents.astro";
+import Layout from "../../layouts/Layout.astro";
+import {format} from "date-fns";
+import {stripDate} from "../../utils";
+import Link from "../../components/Link.astro";
+
+export async function getStaticPaths() {
+    const posts = await getCollection('posts');
+    return posts.map((post) => ({
+        params: {slug: stripDate(post.id)},
+        props: post,
+    }));
+}
+type Props = CollectionEntry<'posts'>;
+
+const post = Astro.props;
+const {Content, headings, remarkPluginFrontmatter} = await render(post);
+---
+
+<Layout {...post.data}>
+    <h1>{post.data.title}</h1>
+    <span class="text-sm mt-0.5">{format(post.data.pubDate, "MMMM do, yyyy")}
+        · {remarkPluginFrontmatter.minutesRead}</span>
+    {headings.length > 0 &&
+            <TableOfContents headings={headings}/>}
+    <article class="mb-10">
+        <Content/>
+    </article>
+    <script src="https://giscus.app/client.js"
+            data-repo="jacob-swanson/personal-site"
+            data-repo-id="MDEwOlJlcG9zaXRvcnk0ODMzMTY4NQ=="
+            data-category="Announcements"
+            data-category-id="DIC_kwDOAuF7pc4CZfHz"
+            data-mapping="pathname"
+            data-strict="0"
+            data-reactions-enabled="1"
+            data-emit-metadata="1"
+            data-input-position="top"
+            data-theme="preferred_color_scheme"
+            data-lang="en"
+            data-loading="lazy"
+            crossorigin="anonymous"
+            async>
+    </script>
+</Layout>

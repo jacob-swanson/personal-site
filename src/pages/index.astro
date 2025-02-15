@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import {Icon} from 'astro-icon/components';
+import PostList from "../components/PostList.astro";
+import Link from "../components/Link.astro";
+
+const email = "me@jacob-swanson.com";
+const email_url = `mailto:${email}`;
+const github_url = "https://github.com/jacob-swanson";
+const instagram_url = "https://www.instagram.com/jacob.swanson.n";
+const linkedin_url = "https://www.linkedin.com/in/jacob-swanson-1a1660a3";
+---
+
+<Layout>
+    <h1>Jacob Swanson</h1>
+
+    <p>Hi, I'm a software engineer living and working in Austin, TX.</p>
+
+    <ul>
+        <li>me
+            <ul>
+                <li>
+                    <Icon name="mdi:email-outline"/>
+                    <Link href={email_url}>email</Link> ({email})
+                </li>
+                <li>
+                    <Icon name="mdi:github"/>
+                    <Link href={github_url}>github</Link>
+                </li>
+                <li>
+                    <Icon name="mdi:linkedin"/>
+                    <Link href={linkedin_url}>linkedin</Link>
+                </li>
+                <li>
+                    <Icon name="mdi:instagram"/>
+                    <Link href={instagram_url}>instagram</Link>
+                </li>
+            </ul>
+        </li>
+        <li><Link href="/resume">resume</Link></li>
+        <li><Link href="/privacy">privacy</Link></li>
+        <li>posts
+            <PostList/>
+        </li>
+    </ul>
+</Layout>
