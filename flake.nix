@@ -15,6 +15,17 @@
       ];
       forAllSystems = nixpkgs.lib.genAttrs supportedSystems;
       packageJson = builtins.fromJSON (builtins.readFile ./package.json);
+        # https://nixos.org/manual/nixpkgs/stable/#javascript-tool-specific
+      package = pkgs.buildNpmPackage rec {
+                            pname = packageJson.name;
+                            version = packageJson.version;
+                            src = ./.;
+                            npmDepsHash = "sha256-jWXhZkQsPNjD2EiBtf7L+Y4iqvEnpc4X5bvSP9MOv4w=";
+                            installPhase = ''
+                              mkdir -p $out
+                              cp -r dist/* $out/
+                            '';
+                          };
     in
     {
       devShells = forAllSystems (
@@ -39,17 +50,7 @@
           pkgs = import nixpkgs { inherit system; };
         in
         {
-          # https://nixos.org/manual/nixpkgs/stable/#javascript-tool-specific
-          default = pkgs.buildNpmPackage rec {
-            pname = packageJson.name;
-            version = packageJson.version;
-            src = ./.;
-            npmDepsHash = "sha256-jWXhZkQsPNjD2EiBtf7L+Y4iqvEnpc4X5bvSP9MOv4w=";
-            installPhase = ''
-              mkdir -p $out
-              cp -r dist/* $out/
-            '';
-          };
+          default = package;
         }
       );
 
@@ -81,14 +82,14 @@
           cfg = config.services.personal-site;
         in
         {
-          options.services.personal-site = with lib.types; {
-            enable = mkEnableOption "Enable ${packageJson.name}";
-            domain = mkOption {
-              type = str;
+          options.services.personal-site = {
+            enable = lib.mkEnableOption "Enable ${packageJson.name}";
+            domain = lib.mkOption {
+              type = lib.types.str;
             };
-            package = mkOption {
-              default = self.packages.${system}.default;
-              type = package;
+            package = lib.mkOption {
+              default = package;
+              type = lib.types.package;
             };
           };
 
