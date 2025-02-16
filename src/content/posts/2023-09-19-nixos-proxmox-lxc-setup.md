@@ -1,9 +1,6 @@
 ---
 pubDate: 2023-09-19
 title: NixOS on Proxmox LXC Setup 
-redirects: [
- "tech/2023/09/19/nixos-on-proxmox-lxc-setup"
-]
 ---
 
 This guide will explain how to install NixOS in an LXC container in Proxmox.

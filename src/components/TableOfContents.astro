@@ -21,7 +21,7 @@ const {headings} = Astro.props;
 const toc = buildToc(headings);
 ---
 
-<div class="rounded-md border-2 dark:border-zinc-600 border-zinc-400 mt-5 py-4 pl-3 pr-6 w-fit">
+<div class="rounded-md border dark:border-zinc-600 border-zinc-200 mt-5 py-4 pl-3 pr-6 w-fit shadow-sm">
     <span>Table of Contents</span>
     <ul>
         {toc.map((heading) =>

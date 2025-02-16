@@ -2,10 +2,13 @@
 import {defineConfig} from 'astro/config';
 import tailwindcss from '@tailwindcss/vite';
 import icon from 'astro-icon';
-import {remarkReadingTime} from './remark-reading-time.mjs';
+import {remarkReadingTime} from './src/remark-reading-time.mjs';
 import mdx from '@astrojs/mdx';
 import sitemap from "@astrojs/sitemap";
 import rehypeExternalLinks from "rehype-external-links";
+import expressiveCode from "astro-expressive-code";
+// https://github.com/nefrob/vscode-just/blob/main/syntaxes/just.tmLanguage.json
+import justfileLang from "./src/justfile-lang.json";
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,7 +28,13 @@ export default defineConfig({
             ]
         ]
     },
-    integrations: [icon(), mdx(), sitemap()],
+    integrations: [icon(), expressiveCode({
+        shiki: {
+            langs: [
+                justfileLang
+            ]
+        }
+    }), mdx(), sitemap(),],
     redirects: {
         // Redirects from Jekyll site
         "/tech/2023/09/19/nixos-proxmox-lxc-setup": "/posts/nixos-proxmox-lxc-setup",
