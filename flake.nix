@@ -22,7 +22,7 @@
           pname = packageJson.name;
           version = packageJson.version;
           src = ./.;
-          npmDepsHash = "sha256-l07pYFxemzGWPhzre99ev5lqsmL1uZLNov0CxMZTUKw=";
+          npmDepsHash = "sha256-KffagzwIdkYW4809XUMwczMT0F8xU2SEZhv9cd2JymY=";
           installPhase = ''
             mkdir -p $out
             cp -r dist/* $out/
