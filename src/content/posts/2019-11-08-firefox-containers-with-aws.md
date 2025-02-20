@@ -1,6 +1,7 @@
 ---
 pubDate: 2019-11-08
 title: Managing multiple AWS Consoles with JumpCloud and Firefox
+description: Learn how to manage multiple AWS Consoles with JumpCloud and Firefox by using the Multi-Account Containers and Containerise add-ons. Open your AWS accounts in separate tabs automatically with just a click, without needing to manually select a container
 ---
 
 This article will explain how I setup Firefox to open multiple AWS Consoles in Firefox Container tabs from JumpCloud seamlessly.

@@ -1,6 +1,7 @@
 ---
 pubDate: 2023-09-19
-title: NixOS on Proxmox LXC Setup 
+title: NixOS on Proxmox LXC Setup
+description: Learn how to install NixOS in an LXC container on Proxmox. This guide covers downloading or building an LXC template, setting up the container, and configuring NixOS for a smooth deployment.
 ---
 
 This guide will explain how to install NixOS in an LXC container in Proxmox.
@@ -23,8 +24,8 @@ Then upload the CT template using the Proxmox web GUI.
 If there's an issue with the pre-built image, or the base configuration needs to be changed, you can build your own template using Nix.
 
 To generate a Proxmox LXC template, you will need to have a system with Nix installed.
-You can install NixOS in a VM or on a spare machine using the [NixOS ISO](https://nixos.org/download#nixos-iso), 
-or install Nix on an existing Linux or MacOS machine using [the determinate Nix installer](https://github.com/DeterminateSystems/nix-installer), 
+You can install NixOS in a VM or on a spare machine using the [NixOS ISO](https://nixos.org/download#nixos-iso),
+or install Nix on an existing Linux or MacOS machine using [the determinate Nix installer](https://github.com/DeterminateSystems/nix-installer),
 which is supported on Windows via WSL as well.
 
 Generate the template.
@@ -72,8 +73,8 @@ Enter `root` for the username and `nixos` for the password, unless it was change
 Go ahead and set a new root password now, if you haven't already.
 ```
 # password
-New password: 
-Retype new password: 
+New password:
+Retype new password:
 passwd: password updated successfully
 ```
 
@@ -86,8 +87,8 @@ unpacking channels...
 Initialize `/etc/nixos/configuration.nix` using this minimal example.
 ```
 # cat > /etc/nixos/configuration.nix <<EOF
-{ modulesPath, ... }: {  
-  imports = [ (modulesPath + "/virtualisation/proxmox-lxc.nix") ];  
+{ modulesPath, ... }: {
+  imports = [ (modulesPath + "/virtualisation/proxmox-lxc.nix") ];
 }
 EOF
 ```

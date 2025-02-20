@@ -18,6 +18,6 @@ start-dev:
 fmt-nix:
     nixfmt *.nix
 
-# Get node_module sha256
+# Get node_modules sha256
 prefetch-npm-deps:
     prefetch-npm-deps package-lock.json

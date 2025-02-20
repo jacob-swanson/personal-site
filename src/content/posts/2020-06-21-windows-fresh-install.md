@@ -1,6 +1,7 @@
 ---
 pubDate: 2020-06-21
 title: How I do a fresh install of Windows
+description: A step-by-step guide on how to do a fresh install of Windows, including backup creation, installation, driver setup, and essential software recommendations.
 ---
 
 This is mostly for me to reference myself, but maybe you'll find this useful and can pick and choose some steps that you like.

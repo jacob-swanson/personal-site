@@ -1,6 +1,7 @@
 ---
 pubDate: 2025-02-15
 title: Automating Proxmox Homelab Maintenance with Ansible
+description: Automate Proxmox homelab maintenance with Ansible. Learn how to streamline updates, ensure consistency, and reduce manual effort with simple playbooks.
 ---
 
 Running Proxmox in the homelab is a great way to learn about virtualization, containerization, and infrastructure management.
@@ -93,9 +94,9 @@ ok: [pve-12]
 ok: [pbs-13]
 
 PLAY RECAP *******************************************************************************************************
-pbs-13                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-pve-10                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-pve-11                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+pbs-13                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+pve-10                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+pve-11                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 pve-12                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
@@ -111,7 +112,7 @@ help:
 
 # Ping all hosts
 ping:
-	ansible-playbook playbooks/ping.yaml
+    ansible-playbook playbooks/ping.yaml
 ```
 
 Run the ping playbook using `just`.
@@ -123,9 +124,9 @@ Available recipes:
 $ just ping
 ...
 PLAY RECAP *******************************************************************************************************
-pbs-13                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-pve-10                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
-pve-11                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+pbs-13                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+pve-10                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+pve-11                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 pve-12                     : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
@@ -198,11 +199,11 @@ help:
 
 # Ping all hosts
 ping:
-	ansible-playbook playbooks/ping.yaml
+    ansible-playbook playbooks/ping.yaml
 
 # Install updates
 install-updates:
-	ansible-playbook playbooks/install-updates.yaml
+    ansible-playbook playbooks/install-updates.yaml
 ```
 
 Then run it!
@@ -210,10 +211,10 @@ Then run it!
 $ just install-updates
 ...
 PLAY RECAP *******************************************************************************************************
-pbs-13                     : ok=6    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
-pve-10                     : ok=6    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
-pve-11                     : ok=6    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0   
-pve-12                     : ok=6    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0 
+pbs-13                     : ok=6    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0
+pve-10                     : ok=6    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0
+pve-11                     : ok=6    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0
+pve-12                     : ok=6    changed=0    unreachable=0    failed=0    skipped=5    rescued=0    ignored=0
 ```
 
 ### Waiting for LXCs to Finish Booting
@@ -236,7 +237,7 @@ This checks the `systemd` status of each LXC to see if it's done booting.
   ansible.builtin.shell: |
     # Fail on error instead of continuing
 	set -eu -o pipefail
-	
+
 	# Ignore PBS
 	if ! command -v pct &>/dev/null; then
 	  exit 0

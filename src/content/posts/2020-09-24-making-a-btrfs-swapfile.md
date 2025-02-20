@@ -1,6 +1,7 @@
 ---
 pubDate: 2020-09-24
 title: Making a Btrfs Swapfile
+description: Learn how to set up a swapfile on Btrfs with step-by-step instructions.
 ---
 
 When setting up swap on Btrfs, there are a few extra things to take into consideration.
@@ -54,7 +55,3 @@ Add the following to `/etc/fstab`.
 
 * [Swap - ArchWiki](https://wiki.archlinux.org/index.php/swap)
 * [Do we really need swap on modern systems?](https://www.redhat.com/en/blog/do-we-really-need-swap-modern-systems)
-
-
-
-

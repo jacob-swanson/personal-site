@@ -1,6 +1,7 @@
 ---
 pubDate: 2019-05-15
 title: Make Docker use different IP ranges on Linux
+description: Learn how to configure Docker to use different IP ranges on Linux by adjusting settings.
 ---
 
 In this post, you'll find out how to configure the IP ranges that Docker uses for its networks.

@@ -1,6 +1,7 @@
 ---
 pubDate: 2020-07-21
-title: Installing Ubuntu from scratch (without the installer)
+title: Breaking Down the Ubuntu Install Process
+description: Learn how to install Ubuntu from scratch without using the installer.
 ---
 
 In this article, I will describe the steps I took to install Ubuntu from scratch.
@@ -15,13 +16,6 @@ The primary reason was that [Ubiquity](https://wiki.ubuntu.com/Ubiquity) (Ubuntu
 It will automatically use `@` for `/` and `@home` for `/home`.
 
 The other reasons were that I wanted as small of an install as I could manage, and I wanted to learn a thing or two.
-
-## Changelog
-
-I'll keep a list of changes made to this document here.
-The top most item in the list will be the most recent change.
-
-* Fix command order when mounting FS. (The mkdir was before the mount.)
 
 ## Step 1: Boot up Ubuntu
 

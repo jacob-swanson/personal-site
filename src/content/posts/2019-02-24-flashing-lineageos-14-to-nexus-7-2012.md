@@ -1,6 +1,7 @@
 ---
 pubDate: 2019-02-24
 title: Flashing LineageOS 14.1 to a Nexus 7 (2012)
+description: Follow this guide to flash LineageOS 14.1 on a Nexus 7 (2012) tablet. Learn the steps for unlocking the bootloader, installing TWRP, and sideloading the ROM and Google Apps to restore functionality to your device.
 ---
 
 ![Nexus 7 (2012)](/assets/nexus-7-2012.png)

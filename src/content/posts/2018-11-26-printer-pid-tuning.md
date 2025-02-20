@@ -1,6 +1,7 @@
 ---
 pubDate: 2018-11-26
 title: 3D Printer PID Tuning with OctoPrint
+description: Learn how to tune your 3D printer's PID settings using OctoPrint to improve temperature control and ensure consistent printing. Follow these step-by-step instructions for better performance with your hotend.
 ---
 
 What you'll need

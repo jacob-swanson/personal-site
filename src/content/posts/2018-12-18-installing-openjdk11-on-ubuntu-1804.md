@@ -1,6 +1,7 @@
 ---
 pubDate: 2018-12-28
 title: Installing the actual OpenJDK 11 on Ubuntu 18.04
+description: Learn how to install the actual OpenJDK 11 on Ubuntu 18.04, bypassing the default OpenJDK 10 package. Follow this guide to use a PPA for a proper installation of Java 11 for development.
 ---
 
 When you install OpenJDK on Ubuntu 18.04 (the current LTS release), you actually get OpenJDK 10 masquerading as OpenJDK 11.
