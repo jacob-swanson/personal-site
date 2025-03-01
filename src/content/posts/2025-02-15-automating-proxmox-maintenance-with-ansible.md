@@ -252,19 +252,19 @@ This checks the `systemd` status of each LXC to see if it's done booting.
   	pct list | tail -n +2 | while read -r vmid status lock name; do
   	  # The lock column can be empty, so shift right
   	  if [[ "$name" == "" ]]; then
-  		name=$lock
-  		lock=""
+  		  name=$lock
+  		  lock=""
   	  fi
   	  # Skip stopped LXCs
   	  if [[ "$status" != "running" ]]; then
-  		echo "$vmid ($name) is $status"
-  		continue
+  		  echo "$vmid ($name) is $status"
+  		  continue
   	  fi
   	  # Check systemd status
   	  systemd_status=$(pct exec "$vmid" -- systemctl is-system-running)
   	  echo "$vmid ($name) is $systemd_status"
   	  if [[ "$systemd_status" != "running" ]]; then
-  		exit 1
+  		  exit 1
   	  fi
   	done
   args:
