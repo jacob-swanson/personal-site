@@ -27,6 +27,7 @@ Create an inventory file listing your Proxmox VE and Proxmox Backup servers.
 Start by creating a new directory and placing these files in it.
 
 In this example, I have created two groups:
+
 1. `pve` - For Proxmox VE hosts
 2. `pbs` - For Proxmox Backup hosts
 
@@ -77,6 +78,7 @@ This will be a simple playbook that verifies connectivity to all the hosts that 
 ```
 
 Run the playbook:
+
 ```console
 $ ansible-playbook playbooks/ping.yaml
 PLAY [Ping] *******************************************************************************************************
@@ -116,6 +118,7 @@ ping:
 ```
 
 Run the ping playbook using `just`.
+
 ```console
 $ just
 Available recipes:
@@ -136,6 +139,7 @@ This playbook will show the available updates on all hosts.
 You can use this to check to see if any updates are needed.
 
 In addition to just installing upgrades using `apt`, this playbook will...
+
 1. Show you the available upgrades, so you have some clues if something ends up broken.
 2. Reboot the machine if the updates require it.
 3. Process each host in series instead of using the default linear strategy, to reduce blast radius.
@@ -192,6 +196,7 @@ This playbook will install updates on all hosts.
 ```
 
 Now add a new command to your `justfile`.
+
 ```just title="justfile" ins={8-11}
 # Show help
 help:
@@ -207,6 +212,7 @@ install-updates:
 ```
 
 Then run it!
+
 ```console
 $ just install-updates
 ...
@@ -236,31 +242,33 @@ This checks the `systemd` status of each LXC to see if it's done booting.
 - name: Wait for LXCs to finish booting
   ansible.builtin.shell: |
     # Fail on error instead of continuing
-	set -eu -o pipefail
+  	set -eu -o pipefail
 
-	# Ignore PBS
-	if ! command -v pct &>/dev/null; then
-	  exit 0
-	fi
-	# List running containers and check systemd status
-	pct list | tail -n +2 | while read -r vmid status lock name; do
-	  # The lock column can be empty, so shift right
-	  if [[ "$name" == "" ]]; then
-		name=$lock
-		lock=""
-	  fi
-	  # Skip stopped LXCs
-	  if [[ "$status" != "running" ]]; then
-		echo "$vmid ($name) is $status"
-		continue
-	  fi
-	  # Check systemd status
-	  systemd_status=$(pct exec "$vmid" -- systemctl is-system-running)
-	  echo "$vmid ($name) is $systemd_status"
-	  if [[ "$systemd_status" != "running" ]]; then
-		exit 1
-	  fi
-	done
+  	# Ignore PBS
+  	if ! command -v pct &>/dev/null; then
+  	  exit 0
+  	fi
+  	# List running containers and check systemd status
+  	pct list | tail -n +2 | while read -r vmid status lock name; do
+  	  # The lock column can be empty, so shift right
+  	  if [[ "$name" == "" ]]; then
+  		name=$lock
+  		lock=""
+  	  fi
+  	  # Skip stopped LXCs
+  	  if [[ "$status" != "running" ]]; then
+  		echo "$vmid ($name) is $status"
+  		continue
+  	  fi
+  	  # Check systemd status
+  	  systemd_status=$(pct exec "$vmid" -- systemctl is-system-running)
+  	  echo "$vmid ($name) is $systemd_status"
+  	  if [[ "$systemd_status" != "running" ]]; then
+  		exit 1
+  	  fi
+  	done
+  args:
+    executable: /bin/bash
   when: reboot_required_file.stat.exists
   retries: 3
   delay: 30
